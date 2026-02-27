@@ -39,16 +39,16 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Yoga Classes in Pimple Saudagar | Medical Yoga Therapy Pune',
-  description: 'Arogya Raksha is Pimpri Chinchwad\'s premier Therapeutic Yoga & Medical Wellness Studio in Pimple Saudagar. Specializing in PCOS, prenatal, and senior mobility therapies.',
+  title: 'Weight Loss & Therapeutic Yoga in Pimple Saudagar | Arogya Raksha',
+  description: 'Join Pimpri Chinchwad’s trusted 5⭐ yoga studio for weight loss, PCOS, prenatal, back pain & medical yoga therapy. Offline classes in Pimple Saudagar & online yoga across India.',
   generator: 'v0.app',
   keywords: ['yoga classes near me', 'yoga classes in Pimple Saudagar', 'best yoga classes in Pune', 'medical yoga therapy', 'therapeutic yoga near me', 'yoga therapy centre', 'Pimpri Chinchwad'],
   authors: [{ name: 'Arogya Raksha Yoga' }],
   icons: {
     icon: [
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/images/logo.png',
+        type: 'image/png',
       },
     ],
   },

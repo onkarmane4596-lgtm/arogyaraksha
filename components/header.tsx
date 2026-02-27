@@ -61,11 +61,11 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-4 py-6 md:px-12 golden-sandwich",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out py-6 golden-sandwich",
           scrolled ? "bg-background/80 backdrop-blur-md py-4 shadow-lg border-b border-white/10" : "bg-transparent"
         )}
       >
-        <div className="container-fluid flex items-center justify-between mx-auto">
+        <div className="container flex items-center justify-between">
           {/* Logo / Brand Name */}
           <Link href="/" className="relative z-50 flex items-center gap-3" onClick={() => setIsOpen(false)}>
             <Image

@@ -16,7 +16,7 @@ export default function Home() {
       <Header />
 
       {/* Main Content */}
-      <div className="flex-1 w-full">
+      <div className="flex-1 w-full overflow-hidden">
         <HeroSection />
 
         <WorkshopsSection />
