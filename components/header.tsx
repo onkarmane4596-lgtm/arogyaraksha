@@ -155,7 +155,7 @@ export function Header() {
               variants={linkVariants}
               className="absolute bottom-12 flex gap-8 text-white/50"
             >
-              <a href="https://www.instagram.com/yoga_with_shankar/" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors"><Instagram size={28} /></a>
+              <a href="https://www.instagram.com/arogyaraksha_pimple_saudagar/?hl=en" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors"><Instagram size={28} /></a>
               <a href="#" className="hover:text-primary transition-colors"><Facebook size={28} /></a>
             </motion.div>
           </motion.div>

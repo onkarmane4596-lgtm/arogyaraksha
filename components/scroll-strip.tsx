@@ -4,15 +4,12 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
 const mantras = [
-    "Science-Backed Healing",
-    "Therapeutic Focus",
-    "Mind-Body Realignment",
-    "Clinical Excellence",
-    "Ancient Wisdom",
-    "Modern Approach",
-    "Vedic Insights",
-    "Hormonal Balance",
-    "Metabolic Wellness"
+    "Arogyaraksha Yoga Pune",
+    "Arogyaraksha Yoga Pune",
+    "Arogyaraksha Yoga Pune",
+    "Arogyaraksha Yoga Pune",
+    "Arogyaraksha Yoga Pune",
+    "Arogyaraksha Yoga Pune"
 ]
 
 export function ScrollStrip() {

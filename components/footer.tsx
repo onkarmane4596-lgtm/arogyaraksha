@@ -37,7 +37,7 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/yoga_with_shankar/"
+                href="https://www.instagram.com/arogyaraksha_pimple_saudagar/?hl=en"
                 target="_blank"
                 rel="noreferrer"
                 className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-emerald-600 hover:text-white transition-all duration-300 hover:-translate-y-1"
