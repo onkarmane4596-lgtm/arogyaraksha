@@ -115,29 +115,29 @@ export default function AboutPage() {
       {/* Visual Story Timeline - Light Theme */}
       <section className="py-24 md:py-32 bg-stone-50 relative">
         <div className="container max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-10"
+              className="space-y-8"
             >
               <div className="space-y-4">
                 <span className="text-emerald-600 font-bold tracking-[0.2em] uppercase text-xs">Our Origins</span>
-                <h2 className="font-sans text-5xl md:text-6xl text-slate-900 leading-[1.1] tracking-tight">
+                <h2 className="font-sans text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-[1.1] tracking-tight">
                   A Sanctuary Born from <br />
                   <span className="italic font-light text-slate-500">Personal Necessity</span>
                 </h2>
               </div>
 
-              <div className="space-y-8 text-slate-600 leading-relaxed font-light text-xl">
+              <div className="space-y-6 md:space-y-8 text-slate-600 leading-relaxed font-light text-lg md:text-xl">
                 <p>
                   Arogya Raksha (meaning "health protection" in Sanskrit) was founded on the principle that yoga is not just an exercise class—it is definitive medicine.
                 </p>
                 <p>
                   Our founder witnessed firsthand how clinical, therapeutic yoga transformed her family's health, specifically in managing PCOS and age-related mobility issues where conventional approaches struggled.
                 </p>
-                <p className="border-l-4 border-emerald-500 pl-8 py-2 italic text-slate-900 font-medium">
+                <p className="border-l-4 border-emerald-500 pl-6 md:pl-8 py-2 italic text-slate-800 font-medium">
                   "Today, we stand as Pune's premier sanctuary dedicated strictly to internal correction and life-changing vitality."
                 </p>
               </div>
@@ -147,15 +147,16 @@ export default function AboutPage() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200"
+              className="relative w-full rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200"
             >
               <Image
-                src="https://images.unsplash.com/photo-1593810450967-f9c42732e326"
+                src="/images/1.jpg"
                 alt="Therapeutic Practice"
-                fill
-                className="object-cover"
+                width={1000}
+                height={1000}
+                className="w-full h-auto object-cover"
               />
-              <div className="absolute inset-0 bg-emerald-900/10 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-emerald-900/10 mix-blend-multiply pointer-events-none"></div>
             </motion.div>
           </div>
         </div>

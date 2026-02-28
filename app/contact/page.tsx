@@ -98,7 +98,7 @@ export default function ContactPage() {
           className="absolute inset-0 z-0"
         >
           <Image
-            src="/images/headers/contact-hero.png"
+            src="/images/2.jpg"
             alt="Wellness Reception"
             fill
             className="object-cover object-center"

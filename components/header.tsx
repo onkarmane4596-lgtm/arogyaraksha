@@ -96,12 +96,14 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
+            <a
+              href="https://wa.me/917030705472?text=Hi!%20I'm%20interested%20in%20booking%20a%20yoga%20session."
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-3 rounded-full font-bold text-[14px] transition-all shadow-md hover:shadow-primary/20 bg-primary text-white hover:bg-primary/90 uppercase tracking-widest"
             >
               Book a Session
-            </Link>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -139,14 +141,16 @@ export function Header() {
               ))}
 
               <motion.div variants={linkVariants} className="mt-6 w-full max-w-[300px]">
-                <Link
-                  href="/contact"
+                <a
+                  href="https://wa.me/917030705472?text=Hi!%20I'm%20interested%20in%20starting%20my%20healing%20journey."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-primary text-white rounded-full font-bold text-xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/20"
                   onClick={() => setIsOpen(false)}
                 >
                   Start Healing
                   <ArrowRight size={20} />
-                </Link>
+                </a>
               </motion.div>
             </nav>
 
