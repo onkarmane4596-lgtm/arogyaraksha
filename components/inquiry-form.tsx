@@ -16,8 +16,8 @@ export function InquiryForm() {
   return (
     <section id="contact" className="py-24 md:py-32 bg-stone-50 relative overflow-hidden">
       {/* Background Decor - Organic Shapes */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-100/40 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-50 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
 
       <div className="container relative z-10 max-w-4xl mx-auto text-center">
         <motion.div
@@ -27,7 +27,7 @@ export function InquiryForm() {
           className="space-y-10"
         >
           <div>
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-emerald-600 block mb-4">
+            <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary block mb-4">
               Take the First Step
             </span>
             <h2 className="font-sans text-5xl md:text-6xl lg:text-7xl text-slate-900 leading-[1.1] tracking-tight text-balance">
@@ -43,7 +43,7 @@ export function InquiryForm() {
           <div className="pt-8 flex justify-center">
             <button
               onClick={handleWhatsAppClick}
-              className="group relative inline-flex items-center justify-center gap-4 px-10 py-6 bg-emerald-600 text-white rounded-[2rem] font-bold tracking-widest uppercase shadow-[0_20px_40px_-15px_rgba(5,150,105,0.6)] hover:bg-emerald-700 hover:shadow-[0_20px_50px_-10px_rgba(5,150,105,0.8)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+              className="group relative inline-flex items-center justify-center gap-4 px-10 py-6 bg-primary text-white rounded-[2rem] font-bold tracking-widest uppercase shadow-[0_20px_40px_-15px_rgba(111,166,162,0.6)] hover:bg-primary/90 hover:shadow-[0_20px_50px_-10px_rgba(111,166,162,0.8)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
             >
               {/* Shine effect */}
               <div className="absolute inset-0 block h-full w-full -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shimmer pointer-events-none"></div>

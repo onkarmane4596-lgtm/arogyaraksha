@@ -3,78 +3,62 @@
 import { motion } from 'framer-motion'
 import { Eye, Smile, Droplets, TrendingUp, HeartPulse, Music, ArrowRight, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const workshops = [
     {
         title: "Eye Workshop",
         description: "Specialized exercises to improve vision, reduce eye strain, and relax optic nerves.",
-        icon: Eye,
-        color: "text-blue-600",
-        bg: "bg-blue-50",
-        border: "border-blue-100",
-        glow: "group-hover:shadow-blue-200/30"
+        image: "/images/workshops/eye.png",
+        glow: "group-hover:shadow-[0_8px_30px_rgb(59,130,246,0.15)]",
     },
     {
         title: "Face Yoga",
         description: "Natural techniques to tone facial muscles, stimulate collagen, and achieve a radiant glow.",
-        icon: Smile,
-        color: "text-pink-600",
-        bg: "bg-pink-50",
-        border: "border-pink-100",
-        glow: "group-hover:shadow-pink-200/30"
+        image: "/images/workshops/face.png",
+        glow: "group-hover:shadow-[0_8px_30px_rgb(236,72,153,0.15)]",
     },
     {
         title: "Shuddhikriya",
         description: "Ancient yogic cleansing techniques to purify the respiratory and digestive systems.",
-        icon: Droplets,
-        color: "text-emerald-600",
-        bg: "bg-emerald-50",
-        border: "border-emerald-100",
-        glow: "group-hover:shadow-emerald-200/30"
+        image: "/images/workshops/Shuddhikriya.png",
+        glow: "group-hover:shadow-[0_8px_30px_rgb(16,185,129,0.15)]",
     },
     {
         title: "Weight Gain",
         description: "Healthy, holistic approaches combining specific asanas and diet focus for sustainable weight gain.",
-        icon: TrendingUp,
-        color: "text-green-600",
-        bg: "bg-green-50",
-        border: "border-green-100",
-        glow: "group-hover:shadow-green-200/30"
+        image: "/images/workshops/weight-gain.png",
+        glow: "group-hover:shadow-[0_8px_30px_rgb(34,197,94,0.15)]",
     },
     {
         title: "Medical Yoga",
         description: "Therapeutic interventions tailored for specific physiological or structural health conditions.",
-        icon: HeartPulse,
-        color: "text-rose-600",
-        bg: "bg-rose-50",
-        border: "border-rose-100",
-        glow: "group-hover:shadow-rose-200/30"
+        image: "/images/workshops/medical-yoga.png",
+        glow: "group-hover:shadow-[0_8px_30px_rgb(244,63,94,0.15)]",
     },
     {
         title: "Sound Healing",
         description: "Immersive auditory experiences utilizing vibrations to restore mental and emotional harmony.",
-        icon: Music,
-        color: "text-indigo-600",
-        bg: "bg-indigo-50",
-        border: "border-indigo-100",
-        glow: "group-hover:shadow-indigo-200/30"
+        image: "/images/workshops/sound-healing.png",
+        glow: "group-hover:shadow-[0_8px_30px_rgb(99,102,241,0.15)]",
     },
 ]
 
 export function WorkshopsSection() {
     return (
-        <section className="py-24 md:py-32 bg-[#fafaf9] relative overflow-hidden border-y border-slate-200/60">
-            {/* Soft Ambient Glows */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-100/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-100/20 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+        <section className="py-16 md:py-24 bg-background/50 relative overflow-hidden border-y border-border/20">
+            {/* Soft Ambient Glows (Glassmorphic vibe) */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/3 pointer-events-none mix-blend-multiply opacity-70"></div>
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 pointer-events-none mix-blend-multiply opacity-60"></div>
+            <div className="absolute top-1/2 left-1/2 w-[800px] h-[400px] bg-white/40 rounded-[100%] blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
-            <div className="container relative z-10 max-w-6xl mx-auto">
-                <div className="text-center mb-16 md:mb-24 space-y-4">
+            <div className="container relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+                <div className="text-center mb-10 md:mb-16 space-y-4 md:space-y-6">
                     <motion.span
-                        initial={{ opacity: 0, y: 10 }}
+                        initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600"
+                        className="inline-block py-1 px-3 md:py-1.5 md:px-4 rounded-full bg-white/60 backdrop-blur-sm border border-white/40 shadow-sm text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-primary"
                     >
                         Specialized Focus
                     </motion.span>
@@ -83,74 +67,105 @@ export function WorkshopsSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="font-sans font-bold text-4xl md:text-5xl lg:text-7xl text-slate-900 leading-[1.1] tracking-tight"
+                        className="font-sans font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-heading leading-[1.1] tracking-tight"
                     >
                         Advanced Healing <br className="hidden md:block" />
-                        <span className="italic font-light text-slate-500">Workshops</span>
+                        <span className="italic font-light text-heading/70">Workshops</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-slate-600 text-lg md:text-xl font-light max-w-2xl mx-auto"
+                        className="text-foreground/80 text-sm md:text-lg font-medium max-w-2xl mx-auto leading-relaxed"
                     >
                         Deep dive into specific healing modalities designed to address profound wellness needs with expert guidance.
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                    {workshops.map((workshop, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className={`group relative bg-white p-8 md:p-10 rounded-[2.5rem] border border-slate-200/60 hover:border-emerald-200/50 shadow-sm hover:shadow-2xl ${workshop.glow} transition-all duration-500 ease-out hover:-translate-y-2`}
-                        >
-                            <div className="relative z-10">
-                                <div className={`w-16 h-16 rounded-2xl ${workshop.bg} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-sm`}>
-                                    <workshop.icon size={32} className={workshop.color} />
+                {/* Mobile Scroll Indicator */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    className="md:hidden flex items-center justify-end gap-2 mb-4 text-primary font-medium text-sm pr-2"
+                >
+                    Scroll to explore <ArrowRight size={16} className="animate-pulse" />
+                </motion.div>
+
+                <div className="relative -mx-4 sm:-mx-6 md:mx-0 px-4 sm:px-6 md:px-0">
+                    <div className="flex md:grid flex-nowrap md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-8 pt-4 hide-scrollbar min-w-full">
+                        {workshops.map((workshop, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                                className={`group relative bg-white/60 backdrop-blur-xl p-3 sm:p-4 md:p-6 rounded-[1.5rem] md:rounded-[2rem] border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:bg-white/90 ${workshop.glow} transition-all duration-500 ease-out hover:-translate-y-2 snap-center w-[44vw] min-w-[155px] sm:w-[240px] md:w-auto flex-shrink-0 flex flex-col`}
+                            >
+                                {/* Inner ambient card glow */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-white/0 rounded-[1.5rem] md:rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+                                <div className="relative z-10 flex flex-col h-full">
+                                    <Link href={`https://wa.me/917030705472?text=Hello!%20I%20am%20interested%20in%20the%20${encodeURIComponent(workshop.title)}.%20Could%20you%20please%20provide%20more%20details%3F`} target="_blank" className="flex flex-col h-full">
+
+                                        {/* Image Container */}
+                                        <div className="w-full aspect-[3/4] rounded-xl md:rounded-[1.25rem] overflow-hidden mb-4 md:mb-6 relative shadow-sm border border-white/60 flex-shrink-0 bg-white/40">
+                                            <Image
+                                                src={workshop.image}
+                                                alt={workshop.title}
+                                                fill
+                                                className="object-cover object-top md:object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                                            />
+                                        </div>
+
+                                        <h3 className="font-sans font-bold text-[17px] sm:text-lg md:text-2xl text-heading mb-1.5 md:mb-3 tracking-tight group-hover:text-primary transition-colors duration-300">
+                                            {workshop.title}
+                                        </h3>
+
+                                        <p className="text-heading/70 leading-relaxed font-medium text-[11px] sm:text-[13px] md:text-[15px] flex-grow line-clamp-3 md:line-clamp-none">
+                                            {workshop.description}
+                                        </p>
+
+                                        <div className="mt-3 md:mt-6 flex items-center gap-1.5 md:gap-2 text-[10px] sm:text-[11px] md:text-[13px] font-bold uppercase tracking-wider text-heading/40 group-hover:text-primary transition-colors duration-300">
+                                            <span>Learn more</span>
+                                            <ArrowRight size={14} className="transform -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300" />
+                                        </div>
+                                    </Link>
                                 </div>
-
-                                <h3 className="font-sans font-bold text-2xl text-slate-900 mb-4 tracking-tight">
-                                    {workshop.title}
-                                </h3>
-
-                                <p className="text-slate-600 leading-relaxed font-light">
-                                    {workshop.description}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
 
-                {/* WhatsApp CTA Section */}
+                {/* Refined CTA Section */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 0.8 }}
-                    className="mt-20 flex flex-col items-center text-center space-y-8"
+                    className="mt-16 md:mt-24 flex flex-col items-center text-center space-y-6 relative z-20"
                 >
-                    <div className="flex items-center gap-4 text-slate-400">
-                        <div className="h-px w-12 bg-slate-200"></div>
-                        <span className="text-xs font-bold uppercase tracking-[0.3em]">Interested in a Workshop?</span>
-                        <div className="h-px w-12 bg-slate-200"></div>
+                    <div className="flex items-center gap-3 text-primary/60">
+                        <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary/40"></div>
+                        <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">Ready to begin?</span>
+                        <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary/40"></div>
                     </div>
 
                     <Link
                         href="https://wa.me/917030705472?text=Hello!%20I%20am%20interested%20in%20your%20Specialized%20Healing%20Workshops.%20Could%20you%20please%20provide%20more%20details%3F"
                         target="_blank"
-                        className="group relative inline-flex items-center gap-4 px-12 py-6 bg-emerald-600 text-white rounded-[2rem] font-bold tracking-widest uppercase text-sm shadow-2xl shadow-emerald-700/20 hover:bg-emerald-700 hover:scale-105 transition-all duration-500 overflow-hidden"
+                        className="group relative inline-flex items-center justify-center px-2 py-2 bg-white/80 backdrop-blur-md rounded-full border border-white max-w-sm w-full sm:w-auto shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgb(111,166,162,0.25)] transition-all duration-500 hover:-translate-y-1"
                     >
-                        <span className="relative z-10 flex items-center gap-3">
-                            <MessageCircle size={20} className="fill-current" />
-                            Inquire via WhatsApp
-                            <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-500" />
-                        </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="flex items-center gap-3 md:gap-4 pl-4 pr-1">
+                            <span className="text-sm font-bold tracking-widest uppercase text-heading group-hover:text-primary transition-colors">
+                                Join Our Workshops
+                            </span>
+                            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-md shadow-primary/30 group-hover:scale-105 group-hover:rotate-12 transition-transform duration-500">
+                                <MessageCircle size={20} className="fill-current" />
+                            </div>
+                        </div>
                     </Link>
                 </motion.div>
             </div>

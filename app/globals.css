@@ -7,72 +7,70 @@
 }
 
 :root {
-  /* Midnight Blue & Green Theme - NEW DEFAULT */
-  --background: oklch(0.12 0.04 260);
-  /* Deep Midnight Blue */
-  --foreground: oklch(0.98 0.01 240);
-  /* Ice White */
+  /* Site Theme (Custom Combination) */
+  --background: #F4F4F4;
+  /* Page Background */
+  --foreground: #1E2F42;
+  /* Paragraph */
 
-  --primary: oklch(0.72 0.14 160);
-  /* Vibrant Sage Green */
-  --primary-foreground: oklch(0.12 0.04 260);
+  --heading: #24364A;
+  /* Heading */
 
-  --secondary: oklch(0.2 0.06 255);
-  /* Deep Navy */
-  --secondary-foreground: oklch(0.98 0.01 240);
+  --primary: #6FA6A2;
+  /* Primary Gradient Start */
+  --primary-foreground: #FFFFFF;
 
-  --accent: oklch(0.6 0.1 175);
-  /* Muted Emerald/Teal */
-  --accent-foreground: oklch(0.12 0.04 260);
+  --secondary: #5A92C4;
+  /* Primary Gradient End */
+  --secondary-foreground: #FFFFFF;
 
-  --muted: oklch(0.2 0.03 260);
-  --muted-foreground: oklch(0.7 0.02 240);
+  --accent: #6F9EA0;
+  /* Icon Accent */
+  --accent-foreground: #FFFFFF;
 
-  --card: oklch(0.15 0.03 260);
-  /* Slightly Lighter Midnight Blue */
-  --card-foreground: oklch(0.98 0.01 240);
+  --muted: #F0F5F4;
+  /* Card Background 2 */
+  --muted-foreground: #1E2F42;
 
-  --border: oklch(0.25 0.04 260);
-  --input: oklch(0.2 0.03 260);
-  --ring: oklch(0.72 0.14 160);
+  --card: #FFFFFF;
+  /* Card Background 1 */
+  --card-foreground: #1E2F42;
 
-  --popover: oklch(0.15 0.03 260);
-  --popover-foreground: oklch(0.98 0.01 240);
+  --border: #E2E8E6;
+  --input: #F4F4F4;
+  --ring: #6FA6A2;
+
+  --popover: #F4F4F4;
+  --popover-foreground: #1E2F42;
 
   --destructive: oklch(0.5 0.15 25);
-  --destructive-foreground: oklch(0.98 0 0);
+  --destructive-foreground: #FFFFFF;
 
   --radius: 1rem;
 }
 
 .light {
-  --primary: oklch(0.45 0.05 150);
-  --primary-foreground: oklch(0.98 0.02 95);
-
-  --background: oklch(0.99 0.005 95);
-  --foreground: oklch(0.2 0.02 85);
-
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.02 85);
-
-  --secondary: oklch(0.88 0.05 85);
-  --secondary-foreground: oklch(0.3 0.05 50);
-
-  --accent: oklch(0.75 0.12 75);
-  --accent-foreground: oklch(0.99 0 0);
-
-  --muted: oklch(0.96 0.01 150);
-  --muted-foreground: oklch(0.55 0.02 85);
-
-  --border: oklch(0.92 0.01 95);
-  --input: oklch(0.96 0.01 95);
-  --ring: oklch(0.75 0.12 75);
-
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.02 85);
-
-  --destructive: oklch(0.65 0.15 25);
-  --destructive-foreground: oklch(0.98 0 0);
+  /* Fallback or specific light mode mapping, keeping identical to root for consistency */
+  --background: #F4F4F4;
+  --foreground: #1E2F42;
+  --heading: #24364A;
+  --primary: #6FA6A2;
+  --primary-foreground: #FFFFFF;
+  --secondary: #5A92C4;
+  --secondary-foreground: #FFFFFF;
+  --accent: #6F9EA0;
+  --accent-foreground: #FFFFFF;
+  --muted: #F0F5F4;
+  --muted-foreground: #1E2F42;
+  --card: #FFFFFF;
+  --card-foreground: #1E2F42;
+  --border: #E2E8E6;
+  --input: #F4F4F4;
+  --ring: #6FA6A2;
+  --popover: #F4F4F4;
+  --popover-foreground: #1E2F42;
+  --destructive: oklch(0.5 0.15 25);
+  --destructive-foreground: #FFFFFF;
 }
 
 @theme inline {
@@ -81,6 +79,7 @@
   --color-ring: var(--ring);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-heading: var(--heading);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
@@ -115,7 +114,7 @@
   h4,
   h5,
   h6 {
-    @apply font-sans font-semibold tracking-tight;
+    @apply font-sans font-semibold tracking-tight text-heading;
     line-height: 1.2;
   }
 
@@ -124,8 +123,9 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: var(--container-px, 1.25rem);
-    padding-left: var(--container-px, 1.25rem);
+    padding-right: var(--container-px, 1rem);
+    /* Reduced to 1rem for tighter mobile */
+    padding-left: var(--container-px, 1rem);
   }
 
   @media (min-width: 640px) {
@@ -163,24 +163,24 @@
   }
 
   h1 {
-    @apply text-4xl md:text-5xl;
+    @apply text-3xl sm:text-4xl md:text-5xl;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl;
+    @apply text-2xl sm:text-3xl md:text-4xl;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl;
+    @apply text-xl sm:text-2xl md:text-3xl;
   }
 
   h4 {
-    @apply text-xl md:text-2xl;
+    @apply text-lg md:text-xl lg:text-2xl;
   }
 
   p {
-    @apply text-foreground/85;
-    line-height: 1.7;
+    @apply text-foreground/85 text-[15px] md:text-base;
+    line-height: 1.6;
   }
 
   a {

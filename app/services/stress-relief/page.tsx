@@ -53,7 +53,7 @@ export default function StressReliefPage() {
       <Header />
 
       {/* Breadcrumb */}
-      <div className="bg-muted/30 border-b border-border">
+      <div className="bg-secondary/5 border-b border-border">
         <div className="container py-3 text-sm">
           <Link href="/" className="text-primary hover:text-primary/80">Home</Link>
           <span className="text-foreground/50 mx-2">/</span>
@@ -62,10 +62,10 @@ export default function StressReliefPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-emerald-50/50 to-background">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-primary/10 to-background">
         <div className="container max-w-3xl">
           <div className="flex items-center gap-4 mb-6">
-            <Brain className="text-emerald-500" size={32} />
+            <Brain className="text-primary" size={32} />
             <span className="text-primary font-semibold">Specialized Program</span>
           </div>
 
@@ -112,7 +112,7 @@ export default function StressReliefPage() {
       </section>
 
       {/* Our Practices */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-secondary/5">
         <div className="container max-w-3xl">
           <h2 className="text-balance mb-12 text-center">Therapeutic Tools & Practices</h2>
 
@@ -170,21 +170,21 @@ export default function StressReliefPage() {
           <h2 className="text-balance mb-12 text-center">Real Transformations</h2>
 
           <div className="space-y-6">
-            <div className="bg-white rounded-lg p-6 border border-primary/20">
+            <div className="bg-card rounded-lg p-6 border border-primary/20">
               <p className="text-foreground/75 italic mb-4">
                 "After just two weeks of practice, I noticed I could handle work stress without getting anxious. I sleep better and feel calmer throughout the day."
               </p>
               <p className="font-semibold text-foreground">— Anjali, Software Professional</p>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-primary/20">
+            <div className="bg-card rounded-lg p-6 border border-primary/20">
               <p className="text-foreground/75 italic mb-4">
                 "I've been in therapy for anxiety for years. These yoga practices have given me tools that work immediately. Life feels more manageable now."
               </p>
               <p className="font-semibold text-foreground">— Rohan, Executive</p>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-primary/20">
+            <div className="bg-card rounded-lg p-6 border border-primary/20">
               <p className="text-foreground/75 italic mb-4">
                 "The meditation and breathing techniques have become my go-to for stress. I recommend this program to everyone I know."
               </p>

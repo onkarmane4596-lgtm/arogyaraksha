@@ -50,17 +50,18 @@ const programs = [
 
 export function ProgramCards() {
     return (
-        <section className="py-24 md:py-32 bg-white relative overflow-hidden">
-            {/* Background Texture/Accents - Soft Slate */}
-            <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/grid-slate.svg')] bg-[length:40px_40px] opacity-[0.02] [mask-image:radial-gradient(ellipse_at_center,black,transparent)] pointer-events-none"></div>
+        <section className="py-16 md:py-32 bg-background relative overflow-hidden">
+            {/* Background Texture/Accents - Soft Organic */}
+            <div className="absolute top-0 right-0 w-[400px] md:w-[500px] h-[400px] md:h-[500px] bg-primary/5 rounded-full blur-[100px] md:blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-[400px] md:w-[500px] h-[400px] md:h-[500px] bg-secondary/5 rounded-full blur-[100px] md:blur-[120px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
-            <div className="container relative z-10">
-                <div className="max-w-3xl mb-16 space-y-6">
+            <div className="container relative z-10 px-4 md:px-8">
+                <div className="max-w-3xl mb-12 md:mb-16 space-y-4 md:space-y-6">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100/50 text-emerald-700 text-xs font-bold uppercase tracking-[0.2em]"
+                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]"
                     >
                         Our Programs
                     </motion.div>
@@ -69,16 +70,16 @@ export function ProgramCards() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="font-sans text-4xl md:text-5xl lg:text-7xl text-slate-900 mb-6 leading-[1.1] tracking-tight"
+                        className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-heading mb-4 md:mb-6 leading-[1.1] tracking-tight font-bold"
                     >
-                        Tailored Paths to <br /><span className="italic font-light text-slate-500">Holistic Wellness</span>
+                        Tailored Paths to <br /><span className="italic font-light text-primary">Holistic Wellness</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-lg md:text-xl text-slate-600 font-light max-w-2xl leading-relaxed"
+                        className="text-base md:text-xl text-foreground/80 font-light max-w-2xl leading-relaxed"
                     >
                         Choose the program that resonates with your current needs. From core strength to hormonal balance, we guide you at every step.
                     </motion.p>
@@ -98,31 +99,31 @@ export function ProgramCards() {
                                 transition={{ delay: index * 0.1, duration: 0.8 }}
                                 className="group relative"
                             >
-                                <div className="absolute -inset-0.5 bg-gradient-to-br from-emerald-100 to-transparent rounded-[2.5rem] blur opacity-0 group-hover:opacity-100 transition duration-700"></div>
-                                <div className="relative bg-stone-50 border border-slate-100 rounded-[2.5rem] p-10 h-full flex flex-col hover:border-emerald-100 transition-all duration-500 shadow-xl shadow-slate-200/40">
-                                    <div className="flex justify-between items-start mb-10">
-                                        <div className="w-16 h-16 rounded-[1.25rem] bg-white border border-slate-100 flex items-center justify-center text-emerald-600 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 ease-out shadow-sm">
-                                            <Icon size={32} />
+                                <div className="absolute -inset-0.5 bg-gradient-to-br from-primary/30 to-secondary/10 rounded-[2rem] md:rounded-[2.5rem] blur-md opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                                <div className="relative bg-card border border-primary/10 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-10 h-full flex flex-col hover:border-primary/30 transition-all duration-500 shadow-xl shadow-primary/5">
+                                    <div className="flex justify-between items-start mb-6 md:mb-10">
+                                        <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-[1.25rem] bg-white border border-primary/20 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-500 ease-out shadow-sm">
+                                            <Icon className="w-6 h-6 md:w-8 md:h-8" />
                                         </div>
-                                        <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-500 border border-slate-100 px-4 py-1.5 rounded-full group-hover:border-emerald-200 group-hover:text-emerald-700 transition-colors">
+                                        <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-primary border border-primary/20 bg-white px-3 md:px-4 py-1.5 rounded-full group-hover:border-primary/40 transition-colors">
                                             {program.duration}
                                         </span>
                                     </div>
 
-                                    <h3 className="text-3xl font-sans font-bold mb-4 text-slate-900 group-hover:text-emerald-700 transition-colors tracking-tight">{program.title}</h3>
-                                    <p className="text-slate-600 leading-relaxed font-light mb-10 flex-grow text-lg">
+                                    <h3 className="text-xl sm:text-2xl md:text-3xl font-sans font-bold mb-3 md:mb-4 text-heading group-hover:text-primary transition-colors tracking-tight">{program.title}</h3>
+                                    <p className="text-foreground/80 leading-relaxed font-light mb-6 md:mb-10 flex-grow text-[14px] md:text-lg">
                                         {program.description}
                                     </p>
 
-                                    <div className="space-y-5">
-                                        <div className="flex items-center gap-4 text-xs font-bold text-slate-500 uppercase tracking-widest bg-white p-4 rounded-2xl border border-slate-50 shadow-sm">
-                                            <Clock size={16} className="text-emerald-600" />
+                                    <div className="space-y-4 md:space-y-5">
+                                        <div className="flex items-center gap-3 md:gap-4 text-[11px] md:text-xs font-bold text-heading uppercase tracking-widest bg-white p-3 md:p-4 rounded-xl md:rounded-2xl border border-primary/10 shadow-sm">
+                                            <Clock size={16} className="text-primary" />
                                             <span>{program.timing}</span>
                                         </div>
                                         <Link
                                             href={waUrl}
                                             target="_blank"
-                                            className="w-full inline-flex items-center justify-center gap-3 px-8 py-5 bg-emerald-600 text-white rounded-2xl font-bold tracking-widest uppercase text-xs shadow-lg shadow-emerald-700/20 hover:bg-emerald-700 transition-all group/btn"
+                                            className="w-full inline-flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-4 md:py-5 bg-primary text-white rounded-xl md:rounded-2xl font-bold tracking-widest uppercase text-[11px] md:text-xs shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all group/btn"
                                         >
                                             Inquire Now
                                             <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -140,23 +141,23 @@ export function ProgramCards() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 0.8 }}
-                    className="mt-20 flex flex-col items-center text-center space-y-8"
+                    className="mt-16 md:mt-20 flex flex-col items-center text-center space-y-6 md:space-y-8 px-4"
                 >
-                    <div className="flex items-center gap-4 text-slate-400">
-                        <div className="h-px w-12 bg-slate-200"></div>
-                        <span className="text-xs font-bold uppercase tracking-[0.3em]">Take the First Step</span>
-                        <div className="h-px w-12 bg-slate-200"></div>
+                    <div className="flex items-center gap-3 md:gap-4 text-primary">
+                        <div className="h-px w-8 md:w-12 bg-primary/20"></div>
+                        <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] text-center">Take the First Step</span>
+                        <div className="h-px w-8 md:w-12 bg-primary/20"></div>
                     </div>
 
                     <Link
                         href="/contact"
-                        className="group relative inline-flex items-center gap-4 px-12 py-6 bg-slate-900 text-white rounded-[2rem] font-bold tracking-widest uppercase text-sm shadow-2xl shadow-slate-950/20 hover:bg-emerald-600 hover:scale-105 transition-all duration-500 overflow-hidden"
+                        className="group relative inline-flex items-center justify-center gap-3 md:gap-4 px-6 sm:px-8 md:px-12 py-4 md:py-6 bg-primary text-white rounded-full md:rounded-[2rem] font-bold tracking-widest uppercase text-[11px] md:text-sm shadow-2xl shadow-primary/20 hover:bg-primary/90 hover:scale-105 transition-all duration-500 overflow-hidden w-full sm:w-auto"
                     >
-                        <span className="relative z-10 flex items-center gap-3">
-                            Consult Our Experts & Enroll Now
-                            <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-500" />
+                        <span className="relative z-10 flex items-center justify-center gap-2 md:gap-3">
+                            <span className="truncate">Consult Our Experts</span>
+                            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 shrink-0 group-hover:translate-x-1 md:group-hover:translate-x-2 transition-transform duration-500" />
                         </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </Link>
                 </motion.div>
             </div>

@@ -38,29 +38,29 @@ function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-3 md:space-y-4">
       {faqs.map((faq, index) => (
         <div
           key={index}
           className={cn(
-            "bg-stone-50/50 backdrop-blur-sm rounded-2xl border transition-all duration-300 overflow-hidden",
-            openIndex === index ? "border-emerald-500/30 shadow-xl shadow-emerald-900/5" : "border-slate-100 hover:border-emerald-200"
+            "bg-card/50 backdrop-blur-sm rounded-[1.5rem] border transition-all duration-300 overflow-hidden",
+            openIndex === index ? "border-primary/30 shadow-xl shadow-primary/5" : "border-primary/10 hover:border-primary/20"
           )}
         >
           <button
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            className="w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+            className="w-full text-left px-5 py-4 md:px-6 md:py-5 flex items-center justify-between gap-4 group"
           >
             <span className={cn(
-              "font-semibold text-lg transition-colors duration-200",
-              openIndex === index ? "text-emerald-600" : "text-slate-900"
+              "font-semibold text-base md:text-lg transition-colors duration-200",
+              openIndex === index ? "text-primary" : "text-heading group-hover:text-primary/80"
             )}>
               {faq.question}
             </span>
             <ChevronDown
               className={cn(
-                "text-slate-400 transition-transform duration-300 flex-shrink-0",
-                openIndex === index ? "rotate-180 text-emerald-600" : ""
+                "w-4 h-4 md:w-5 md:h-5 text-foreground/40 transition-transform duration-300 flex-shrink-0",
+                openIndex === index ? "rotate-180 text-primary" : ""
               )}
             />
           </button>
@@ -72,7 +72,7 @@ function FAQAccordion() {
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
-                <div className="px-6 pb-5 pt-1 text-slate-600 font-light leading-relaxed">
+                <div className="px-5 pb-4 pt-1 md:px-6 md:pb-5 text-[14px] md:text-base text-foreground/70 font-light leading-relaxed">
                   {faq.answer}
                 </div>
               </motion.div>
@@ -86,50 +86,59 @@ function FAQAccordion() {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen flex flex-col bg-stone-50 selection:bg-emerald-500/20">
+    <main className="min-h-screen flex flex-col bg-background selection:bg-primary/20">
       <Header />
 
       {/* Immersive Zen-Medical Hero - Contact */}
-      <section className="relative h-[80vh] min-h-[650px] w-full flex items-center justify-center overflow-hidden bg-slate-950">
+      <section className="relative h-[60vh] md:h-[80vh] min-h-[500px] md:min-h-[650px] w-full flex items-center justify-center overflow-hidden bg-background">
         <motion.div
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.5 }}
           transition={{ duration: 2, ease: "easeOut" }}
           className="absolute inset-0 z-0"
         >
+          {/* Desktop Image */}
           <Image
             src="/images/2.jpg"
             alt="Wellness Reception"
             fill
-            className="object-cover object-center"
+            className="hidden md:block object-cover object-center"
+            priority
+          />
+          {/* Mobile Image */}
+          <Image
+            src="/hero-mobile.png"
+            alt="Wellness Reception Mobile"
+            fill
+            className="block md:hidden object-cover object-center"
             priority
           />
         </motion.div>
 
         {/* Premium Overlays for Depth & Focus */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/20 to-stone-50 z-10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(2,6,23,0.4)_100%)] z-10"></div>
-        <div className="absolute inset-0 bg-emerald-950/5 mix-blend-multiply z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/60 to-background z-10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(111,166,162,0.05)_100%)] z-10"></div>
+        <div className="absolute inset-0 bg-primary/5 mix-blend-multiply z-10"></div>
 
-        <div className="container relative z-30 flex flex-col items-center text-center mt-20">
+        <div className="container relative z-30 flex flex-col items-center text-center mt-20 px-4">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <span className="text-emerald-400 font-sans tracking-[0.5em] uppercase text-[10px] font-bold inline-block border-b-2 border-emerald-500/50 pb-3 mb-10 drop-shadow-sm">
+            <span className="text-primary font-sans tracking-[0.2em] md:tracking-[0.4em] uppercase text-[10px] md:text-xs font-bold inline-block border-b-2 border-primary/20 pb-2 md:pb-3 mb-6 md:mb-10 drop-shadow-sm">
               Direct Connection
             </span>
           </motion.div>
 
-          <div className="max-w-6xl mb-10">
+          <div className="max-w-5xl w-full mb-6 md:mb-10">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-7xl md:text-9xl lg:text-[11rem] font-sans font-bold text-white tracking-tighter leading-[0.85] drop-shadow-2xl"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] font-sans font-bold text-heading tracking-tight drop-shadow-sm leading-[1.05]"
             >
-              Let's <span className="italic font-light text-white/80">Heal</span> <br />
+              Let's <span className="italic font-light text-heading/90">Heal</span> <br />
               Together
             </motion.h1>
           </div>
@@ -138,62 +147,62 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7 }}
-            className="text-xl md:text-3xl text-white/70 max-w-4xl leading-relaxed font-light drop-shadow-lg"
+            className="text-base md:text-xl text-foreground/80 max-w-2xl leading-relaxed font-light drop-shadow-sm"
           >
             Have questions about our therapeutic programs? We're here to guide your wellness journey.
           </motion.p>
         </div>
 
         {/* Ambient Zen Sparkle */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-emerald-500/5 rounded-full blur-[150px] z-10 pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[1000px] h-[600px] md:h-[1000px] bg-primary/5 rounded-full blur-[100px] md:blur-[150px] z-10 pointer-events-none"></div>
 
         {/* Bottom Fade to Content */}
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-stone-50 to-transparent z-20"></div>
+        <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 bg-gradient-to-t from-background to-transparent z-20"></div>
       </section>
 
       {/* Two Column Layout: Contact Info & FAQs - Light Theme */}
-      <section className="py-24 md:py-32 relative z-10 bg-stone-50">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32 max-w-7xl mx-auto mb-20">
+      <section className="py-16 md:py-24 relative z-10 bg-secondary/5 border-y border-primary/10 px-4 md:px-8">
+        <div className="container max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20">
 
             {/* Left Column: Contact Details (Premium Light Cards) */}
-            <div className="space-y-12">
-              <div className="space-y-4">
-                <span className="text-emerald-600 font-bold tracking-[0.2em] uppercase text-xs">Reach Out</span>
-                <h2 className="font-sans text-5xl md:text-6xl text-slate-900 leading-[1.1] tracking-tight">
-                  Get in <span className="italic font-light text-slate-500">Touch</span>
+            <div className="space-y-8 md:space-y-12">
+              <div className="space-y-3 md:space-y-4">
+                <span className="text-primary font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-xs">Reach Out</span>
+                <h2 className="font-sans font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-heading leading-[1.1] tracking-tight">
+                  Get in <span className="italic font-light text-primary">Touch</span>
                 </h2>
               </div>
 
-              <div className="grid grid-cols-1 gap-6">
+              <div className="grid grid-cols-1 gap-4 md:gap-6">
                 {/* Address Card */}
-                <div className="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex gap-8 items-start group hover:border-emerald-200 transition-all duration-500">
-                  <div className="w-16 h-16 bg-stone-50 border border-slate-100 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm text-emerald-600">
-                    <MapPin size={28} />
+                <div className="bg-card p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] shadow-xl shadow-primary/5 border border-primary/10 flex gap-4 md:gap-6 items-start group hover:border-primary/30 transition-all duration-500">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-background border border-primary/10 rounded-[1rem] md:rounded-[1.25rem] flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm text-primary">
+                    <MapPin className="w-5 h-5 md:w-7 md:h-7" />
                   </div>
                   <div>
-                    <h3 className="font-sans font-bold text-2xl mb-4 text-slate-900 transition-colors">Studio Location</h3>
-                    <p className="text-slate-600 font-light leading-relaxed mb-4 text-lg">
+                    <h3 className="font-sans font-bold text-lg md:text-2xl mb-2 md:mb-4 text-heading transition-colors group-hover:text-primary">Studio Location</h3>
+                    <p className="text-foreground/80 font-light leading-relaxed mb-4 text-[14px] md:text-[16px]">
                       Main gate, opposite Kundan Estate,<br />
                       Kate Vasti, Kunj Colony, Pimple Saudagar,<br />
                       Pune, Maharashtra 411027
                     </p>
-                    <p className="text-emerald-600 font-bold text-[10px] tracking-widest uppercase bg-emerald-50 inline-block px-3 py-1 rounded-full">
+                    <p className="text-primary font-bold text-[9px] md:text-[10px] tracking-widest uppercase bg-primary/10 inline-block px-3 py-1 rounded-full">
                       Pimpri-Chinchwad & Surrounding Areas
                     </p>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                   {/* Phone Card */}
-                  <div className="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col gap-6 items-start group hover:border-emerald-200 transition-all duration-500">
-                    <div className="w-14 h-14 bg-stone-50 border border-slate-100 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm text-emerald-600">
-                      <Phone size={24} />
+                  <div className="bg-card p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] shadow-xl shadow-primary/5 border border-primary/10 flex flex-col gap-4 md:gap-6 items-start group hover:border-primary/30 transition-all duration-500">
+                    <div className="w-10 h-10 md:w-14 md:h-14 bg-background border border-primary/10 rounded-[1rem] md:rounded-[1.25rem] flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm text-primary">
+                      <Phone className="w-4 h-4 md:w-6 md:h-6" />
                     </div>
                     <div>
-                      <h3 className="font-sans font-bold text-xl mb-3 text-slate-900">Phone</h3>
-                      <p className="text-slate-600 font-light text-lg">
-                        <a href="tel:+917030705472" className="hover:text-emerald-600 transition-colors">
+                      <h3 className="font-sans font-bold text-base md:text-xl mb-1 md:mb-3 text-heading">Phone</h3>
+                      <p className="text-foreground/80 font-light text-[14px] md:text-[16px]">
+                        <a href="tel:+917030705472" className="hover:text-primary transition-colors">
                           +91 70307 05472
                         </a>
                       </p>
@@ -201,15 +210,15 @@ export default function ContactPage() {
                   </div>
 
                   {/* Email Card */}
-                  <div className="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col gap-6 items-start group hover:border-emerald-200 transition-all duration-500">
-                    <div className="w-14 h-14 bg-stone-50 border border-slate-100 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm text-emerald-600">
-                      <Mail size={24} />
+                  <div className="bg-card p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] shadow-xl shadow-primary/5 border border-primary/10 flex flex-col gap-4 md:gap-6 items-start group hover:border-primary/30 transition-all duration-500">
+                    <div className="w-10 h-10 md:w-14 md:h-14 bg-background border border-primary/10 rounded-[1rem] md:rounded-[1.25rem] flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm text-primary">
+                      <Mail className="w-4 h-4 md:w-6 md:h-6" />
                     </div>
                     <div>
-                      <h3 className="font-sans font-bold text-xl mb-3 text-slate-900">Email</h3>
-                      <p className="text-slate-600 font-light text-lg break-all">
-                        <a href="mailto:arogyarakshayoga@gmail.com" className="hover:text-emerald-600 transition-colors">
-                          arogyarakshayoga<br />@gmail.com
+                      <h3 className="font-sans font-bold text-base md:text-xl mb-1 md:mb-3 text-heading">Email</h3>
+                      <p className="text-foreground/80 font-light text-[14px] md:text-[16px] break-all">
+                        <a href="mailto:arogyarakshayoga@gmail.com" className="hover:text-primary transition-colors">
+                          arogyarakshayoga<br className="hidden md:block" />@gmail.com
                         </a>
                       </p>
                     </div>
@@ -217,24 +226,24 @@ export default function ContactPage() {
                 </div>
 
                 {/* Hours Card */}
-                <div className="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex gap-8 items-start group hover:border-emerald-200 transition-all duration-500">
-                  <div className="w-16 h-16 bg-stone-50 border border-slate-100 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm text-emerald-600">
-                    <Clock size={28} />
+                <div className="bg-card p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] shadow-xl shadow-primary/5 border border-primary/10 flex gap-4 md:gap-6 items-start group hover:border-primary/30 transition-all duration-500">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-background border border-primary/10 rounded-[1rem] md:rounded-[1.25rem] flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm text-primary">
+                    <Clock className="w-5 h-5 md:w-7 md:h-7" />
                   </div>
-                  <div className="flex-grow">
-                    <h3 className="font-sans font-bold text-2xl mb-6 text-slate-900">Studio Hours</h3>
-                    <div className="space-y-4">
-                      <div className="flex justify-between items-center py-3 border-b border-slate-50">
-                        <span className="text-slate-500 font-medium tracking-wider uppercase text-[10px]">Mon - Fri</span>
-                        <span className="text-slate-900 font-bold">6:00 AM - 8:00 PM</span>
+                  <div className="flex-grow w-full">
+                    <h3 className="font-sans font-bold text-lg md:text-2xl mb-4 md:mb-6 text-heading group-hover:text-primary">Studio Hours</h3>
+                    <div className="space-y-2 md:space-y-4 text-[13px] md:text-[15px]">
+                      <div className="flex justify-between items-center py-2 md:py-3 border-b border-background">
+                        <span className="text-foreground/50 font-medium tracking-wider uppercase text-[9px] md:text-[10px]">Mon - Fri</span>
+                        <span className="text-heading font-medium md:font-bold">6:00 AM - 8:00 PM</span>
                       </div>
-                      <div className="flex justify-between items-center py-3 border-b border-slate-50">
-                        <span className="text-slate-500 font-medium tracking-wider uppercase text-[10px]">Saturday</span>
-                        <span className="text-slate-900 font-bold">7:00 AM - 6:00 PM</span>
+                      <div className="flex justify-between items-center py-2 md:py-3 border-b border-background">
+                        <span className="text-foreground/50 font-medium tracking-wider uppercase text-[9px] md:text-[10px]">Saturday</span>
+                        <span className="text-heading font-medium md:font-bold">7:00 AM - 6:00 PM</span>
                       </div>
-                      <div className="flex justify-between items-center py-3">
-                        <span className="text-slate-500 font-medium tracking-wider uppercase text-[10px]">Sunday</span>
-                        <span className="text-emerald-600 font-bold uppercase text-xs">Workshops Only</span>
+                      <div className="flex justify-between items-center py-2 md:py-3 cursor-default group/workshop">
+                        <span className="text-foreground/50 font-medium tracking-wider uppercase text-[9px] md:text-[10px]">Sunday</span>
+                        <span className="text-primary font-bold uppercase text-[10px] md:text-[11px] group-hover/workshop:text-primary/70 transition-colors">Workshops Only</span>
                       </div>
                     </div>
                   </div>
@@ -243,21 +252,22 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column: FAQ Accordion - Re-styled for Light Theme */}
-            <div className="space-y-12">
-              <div className="space-y-4">
-                <span className="text-emerald-600 font-bold tracking-[0.2em] uppercase text-xs">Clarifications</span>
-                <h2 className="font-sans text-5xl md:text-6xl text-slate-900 leading-[1.1] tracking-tight">
+            <div className="space-y-8 md:space-y-12">
+              <div className="space-y-3 md:space-y-4 mt-8 lg:mt-0">
+                <span className="text-primary font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-xs">Clarifications</span>
+                <h2 className="font-sans font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-heading leading-[1.1] tracking-tight">
                   Frequently Asked <br />
-                  <span className="italic font-light text-slate-500">Questions</span>
+                  <span className="italic font-light text-primary">Questions</span>
                 </h2>
               </div>
-              <div className="bg-white p-6 md:p-10 rounded-[3rem] shadow-2xl shadow-slate-200/50 border border-slate-100">
+              <div className="bg-card p-6 md:p-8 lg:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl shadow-primary/5 border border-primary/10">
                 <FAQAccordion />
-                <div className="mt-12 p-8 bg-stone-50 rounded-[2rem] border border-slate-100">
-                  <h4 className="font-sans font-bold text-slate-900 mb-2">Still have questions?</h4>
-                  <p className="text-slate-500 font-light mb-6">Our therapists are available for a detailed 1-on-1 discovery call.</p>
-                  <Link href="tel:+917030705472" className="text-emerald-600 font-bold uppercase tracking-widest text-[10px] hover:text-emerald-700 transition-colors flex items-center gap-2 group">
-                    Call our studio <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+
+                <div className="mt-8 md:mt-10 p-6 md:p-8 bg-background rounded-[1.5rem] md:rounded-[2rem] border border-primary/10">
+                  <h4 className="font-sans font-bold text-heading text-[15px] md:text-lg mb-1 md:mb-2">Still have questions?</h4>
+                  <p className="text-foreground/60 font-light mb-4 md:mb-6 text-[13px] md:text-[15px]">Our therapists are available for a detailed 1-on-1 discovery call.</p>
+                  <Link href="tel:+917030705472" className="text-primary font-bold uppercase tracking-[0.2em] md:tracking-widest text-[9px] md:text-[10px] hover:text-primary/80 transition-colors flex items-center gap-2 group">
+                    Call our studio <ArrowRight className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -268,16 +278,16 @@ export default function ContactPage() {
       </section>
 
       {/* Why Reach Out? - Modified to Light/Mixed */}
-      <section className="py-24 bg-white border-y border-slate-100">
-        <div className="container max-w-7xl">
-          <div className="max-w-3xl mb-20 space-y-6">
-            <span className="text-emerald-600 font-bold tracking-[0.2em] uppercase text-xs">Incentives</span>
-            <h2 className="font-sans text-5xl md:text-7xl text-slate-900 leading-[1.1] tracking-tight text-balance">
-              Why Start a <span className="italic font-light text-slate-500">Conversation?</span>
+      <section className="py-16 md:py-24 bg-background px-4 md:px-8">
+        <div className="container max-w-7xl mx-auto">
+          <div className="max-w-3xl mb-12 md:mb-16 space-y-4 md:space-y-6">
+            <span className="text-primary font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-xs">Incentives</span>
+            <h2 className="font-sans font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-heading leading-[1.1] tracking-tight text-balance">
+              Why Start a <span className="italic font-light text-primary">Conversation?</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
               { title: "Personal Health Consultation", desc: "Discuss your metabolic markers or hormonal concerns privately.", icon: Activity },
               { title: "Book a Trial Session", desc: "Experience our clinical teaching approach before you commit.", icon: Play },
@@ -286,12 +296,12 @@ export default function ContactPage() {
             ].map((item, i) => {
               const Icon = item.icon
               return (
-                <div key={i} className="bg-stone-50 p-10 rounded-[2.5rem] border border-slate-100 hover:border-emerald-200 hover:bg-white hover:shadow-2xl hover:shadow-emerald-900/5 transition-all duration-500 group">
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-emerald-600 mb-8 border border-slate-100 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500">
-                    <Icon size={24} />
+                <div key={i} className="bg-card p-6 md:p-8 lg:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-primary/10 hover:border-primary/30 hover:bg-background hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 group flex flex-col justify-start">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-background rounded-xl md:rounded-2xl flex items-center justify-center text-primary mb-6 md:mb-8 border border-primary/10 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm">
+                    <Icon className="w-5 h-5 md:w-6 md:h-6" />
                   </div>
-                  <h3 className="font-sans font-bold text-xl mb-4 text-slate-900 transition-colors leading-tight">{item.title}</h3>
-                  <p className="text-slate-500 font-light leading-relaxed text-base">
+                  <h3 className="font-sans font-bold text-lg md:text-xl mb-3 md:mb-4 text-heading transition-colors leading-tight group-hover:text-primary">{item.title}</h3>
+                  <p className="text-foreground/80 font-light leading-relaxed text-[14px] md:text-[15px]">
                     {item.desc}
                   </p>
                 </div>
@@ -301,17 +311,17 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Inquiry Form Wrapper - Dark Fade to Light Form */}
-      <section className="bg-slate-950 pt-24">
-        <div className="container max-w-5xl text-center mb-16">
-          <h2 className="font-sans text-5xl md:text-7xl text-white leading-[1.1] tracking-tight font-bold mb-8">
-            Start Your <span className="italic font-light text-emerald-500">Inquiry</span>
+      {/* Inquiry Form Wrapper - Light Fade to Light Form */}
+      <section className="bg-card pt-16 md:pt-24 border-t border-primary/10 px-4 md:px-8">
+        <div className="container max-w-5xl mx-auto text-center mb-10 md:mb-16">
+          <h2 className="font-sans font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-heading leading-[1.1] tracking-tight mb-4 md:mb-6">
+            Start Your <span className="italic font-light text-primary">Inquiry</span>
           </h2>
-          <p className="text-xl text-slate-400 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[15px] md:text-xl text-foreground/80 font-light max-w-2xl mx-auto leading-relaxed">
             Fill out the form below and our medical coordinators will get back to you within 24 hours.
           </p>
         </div>
-        <div className="bg-white rounded-t-[4rem] overflow-hidden pt-12 shadow-[0_-20px_50px_rgba(0,0,0,0.2)]">
+        <div className="bg-background rounded-t-[2rem] md:rounded-t-[4rem] overflow-hidden pt-8 md:pt-12 shadow-[0_-10px_40px_rgba(0,0,0,0.03)] border border-b-0 border-primary/10">
           <InquiryForm />
         </div>
       </section>

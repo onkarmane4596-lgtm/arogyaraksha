@@ -7,6 +7,7 @@ import { TransformationJourney } from '@/components/transformation-journey'
 import { MasonryGallery } from '@/components/masonry-gallery'
 import { TestimonialsSection } from '@/components/testimonials-section'
 import { InquiryForm } from '@/components/inquiry-form'
+import { FeaturedBatches } from '@/components/featured-batches'
 import { WorkshopsSection } from '@/components/workshops-section'
 import { ScrollStrip } from '@/components/scroll-strip'
 
@@ -18,6 +19,8 @@ export default function Home() {
       {/* Main Content */}
       <div className="flex-1 w-full overflow-hidden">
         <HeroSection />
+
+        <FeaturedBatches />
 
         <WorkshopsSection />
 

@@ -26,7 +26,7 @@ export function ScrollStrip() {
     return (
         <div
             ref={containerRef}
-            className="relative h-24 md:h-32 bg-slate-950 flex items-center overflow-hidden z-20 -rotate-1 scale-105 select-none"
+            className="relative h-24 md:h-32 bg-card flex items-center overflow-hidden z-20 -rotate-1 scale-105 select-none"
         >
             <motion.div
                 style={{ x: x1 }}
@@ -35,17 +35,17 @@ export function ScrollStrip() {
                 {[...mantras, ...mantras].map((text, i) => (
                     <span
                         key={i}
-                        className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white/10 italic"
+                        className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-heading/10 italic"
                     >
                         {text}
-                        <span className="ml-12 md:ml-24 inline-block w-3 h-3 md:w-4 md:h-4 rounded-full bg-emerald-500/30" />
+                        <span className="ml-12 md:ml-24 inline-block w-3 h-3 md:w-4 md:h-4 rounded-full bg-primary/30" />
                     </span>
                 ))}
             </motion.div>
 
             {/* Subtle glow edges */}
-            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-950 to-transparent z-10" />
-            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-950 to-transparent z-10" />
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-card to-transparent z-10" />
+            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-card to-transparent z-10" />
         </div>
     )
 }
