@@ -51,8 +51,8 @@ export function SEOPageLayout({
                         className="object-cover object-center"
                         priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/60 to-background z-10"></div>
-                    <div className="absolute inset-0 bg-primary/5 mix-blend-multiply z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background z-10"></div>
+                    <div className="absolute inset-0 bg-primary/10 mix-blend-multiply z-10"></div>
                 </div>
 
                 <div className="container relative z-20 flex flex-col items-center text-center mt-20 px-4">
@@ -60,7 +60,7 @@ export function SEOPageLayout({
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-primary font-sans tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-sm font-bold inline-block border-b-2 border-primary/20 pb-2 mb-4 md:mb-6"
+                        className="text-primary font-sans tracking-[0.2em] md:tracking-[0.4em] uppercase text-[10px] md:text-sm font-bold inline-block border-b-2 border-primary/20 pb-2 mb-4 md:mb-6 [text-shadow:_0_1px_2px_rgba(0,0,0,0.05)]"
                     >
                         {eyebrow}
                     </motion.span>
@@ -71,7 +71,7 @@ export function SEOPageLayout({
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="max-w-4xl w-full mb-4 md:mb-6"
                     >
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold text-heading tracking-tight drop-shadow-sm leading-[1.1]">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold text-heading tracking-tight leading-[1.1] [text-shadow:_0_2px_10px_rgba(0,0,0,0.08)]">
                             {title}
                         </h1>
                     </motion.div>
@@ -80,7 +80,7 @@ export function SEOPageLayout({
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        className="text-base md:text-xl text-foreground/80 max-w-2xl leading-relaxed font-light drop-shadow-sm"
+                        className="text-base md:text-xl text-foreground font-medium max-w-2xl leading-relaxed [text-shadow:_0_1px_2px_rgba(0,0,0,0.05)]"
                     >
                         {description}
                     </motion.p>
@@ -196,7 +196,7 @@ export function SEOPageLayout({
                     </p>
                     <Link
                         href={`/contact?program=${encodeURIComponent(contactProgramName)}`}
-                        className="group relative inline-flex items-center justify-center gap-3 md:gap-4 px-8 sm:px-10 md:px-12 py-4 md:py-5 bg-primary text-white rounded-full md:rounded-[2rem] font-bold tracking-widest uppercase text-[11px] md:text-sm shadow-2xl shadow-primary/20 hover:bg-primary/90 hover:scale-105 transition-all duration-500 overflow-hidden w-full sm:w-auto"
+                        className="group relative inline-flex items-center justify-center gap-3 md:gap-4 px-8 sm:px-10 md:px-12 py-4 md:py-5 bg-gradient-to-r from-heading to-primary text-white rounded-full md:rounded-[2rem] font-bold tracking-widest uppercase text-[11px] md:text-sm shadow-2xl shadow-primary/30 hover:shadow-primary/50 hover:scale-105 transition-all duration-500 overflow-hidden w-full sm:w-auto"
                     >
                         <span className="relative z-10 flex items-center justify-center gap-2 md:gap-3">
                             <span className="truncate">Book a Trial Class</span>

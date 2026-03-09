@@ -77,9 +77,9 @@ export default function StressReliefPage() {
 
           <Link
             href="#inquiry"
-            className="inline-block px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-heading to-primary text-white rounded-lg font-bold tracking-widest uppercase text-xs shadow-xl shadow-primary/25 transition-all hover:scale-105 hover:shadow-primary/40"
           >
-            Find Your Inner Peace
+            Join Our Classes
           </Link>
         </div>
       </section>

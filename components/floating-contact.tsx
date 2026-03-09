@@ -15,7 +15,7 @@ export function FloatingContact() {
             >
                 <Link
                     href="https://wa.me/917030705472"
-                    className="flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:scale-110 transition-transform animate-pulse"
+                    className="flex items-center justify-center w-14 h-14 bg-gradient-to-r from-heading to-primary text-white rounded-full shadow-2xl shadow-primary/30 hover:scale-110 transition-all animate-pulse"
                     aria-label="Chat on WhatsApp"
                 >
                     <MessageCircle size={30} className="fill-current" />
@@ -30,7 +30,7 @@ export function FloatingContact() {
             >
                 <Link
                     href="tel:+917030705472"
-                    className="flex items-center justify-center w-14 h-14 bg-white text-green-600 rounded-full shadow-lg hover:scale-110 transition-transform border border-green-100"
+                    className="flex items-center justify-center w-14 h-14 bg-white text-primary rounded-full shadow-lg hover:scale-110 transition-all border border-primary/20"
                     aria-label="Call Us"
                 >
                     <Phone size={28} className="fill-current" />

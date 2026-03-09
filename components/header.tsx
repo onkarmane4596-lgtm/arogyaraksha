@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { Menu, X, ArrowRight, Instagram, Facebook } from 'lucide-react'
+import { Menu, X, ArrowRight, Instagram, Phone } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -34,7 +34,7 @@ export function Header() {
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },
-    { label: 'Batches', href: '/programs' },
+    { label: 'Classes', href: '/programs' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },
   ]
@@ -86,7 +86,7 @@ export function Header() {
               <div className="flex items-center text-base md:text-xl font-sans font-extrabold tracking-tight leading-none text-heading">
                 Arogya<span className="text-primary ml-1">Raksha</span>
               </div>
-              <span className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] font-semibold text-heading/70 mt-0.5">Yoga & Therapy</span>
+              <span className="text-[8px] md:text-[10px] uppercase tracking-[0.4em] font-semibold text-heading/70 mt-0.5">Yoga & Therapy</span>
             </div>
           </Link>
 
@@ -106,12 +106,12 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-4 relative z-[110]">
             <a
-              href="https://wa.me/917030705472?text=Hi!%20I'm%20interested%20in%20booking%20a%20yoga%20session."
+              href="https://wa.me/917030705472?text=Hi!%20I'm%20interested%20in%20joining%20your%20yoga%20classes."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-[13px] transition-all bg-heading text-white hover:bg-primary shadow-md hover:shadow-primary/30 hover:-translate-y-0.5"
+              className="flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-[13px] transition-all bg-gradient-to-r from-heading to-primary text-white shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98]"
             >
-              Book a Session
+              Join Our Classes
               <ArrowRight size={16} />
             </a>
           </div>
@@ -140,14 +140,14 @@ export function Header() {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed inset-0 bg-background/98 backdrop-blur-2xl z-[90] md:hidden flex flex-col pt-24 pb-8 px-5 overflow-y-auto"
+            className="fixed inset-0 bg-background/98 backdrop-blur-2xl z-[90] md:hidden flex flex-col pt-20 pb-6 px-5"
           >
-            <nav className="flex flex-col gap-4 relative z-10 w-full mb-10">
+            <nav className="flex flex-col gap-3 relative z-10 w-full mb-6">
               {navItems.map((item) => (
                 <motion.div key={item.href} variants={linkVariants} className="w-full">
                   <Link
                     href={item.href}
-                    className="flex items-center justify-between text-3xl font-sans font-bold text-heading hover:text-primary transition-colors py-3 border-b border-heading/10 group"
+                    className="flex items-center justify-between text-2xl font-sans font-bold text-heading hover:text-primary transition-colors py-2.5 border-b border-heading/10 group"
                     onClick={() => setIsOpen(false)}
                   >
                     <span>{item.label}</span>
@@ -156,20 +156,20 @@ export function Header() {
                 </motion.div>
               ))}
 
-              <motion.div variants={linkVariants} className="mt-6 w-full">
+              <motion.div variants={linkVariants} className="mt-4 w-full">
                 <a
                   href="https://wa.me/917030705472?text=Hi!%20I'm%20interested%20in%20starting%20my%20healing%20journey."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-between p-5 bg-gradient-to-r from-heading to-primary text-white rounded-2xl font-bold text-lg hover:shadow-xl hover:shadow-primary/30 transition-all active:scale-[0.98]"
+                  className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-heading to-primary text-white rounded-2xl font-bold text-base hover:shadow-xl hover:shadow-primary/40 transition-all active:scale-[0.98]"
                   onClick={() => setIsOpen(false)}
                 >
                   <span className="flex flex-col">
                     <span className="text-[11px] font-medium text-white/80 uppercase tracking-widest mb-1">Start Today</span>
-                    <span>Book Your Session</span>
+                    <span>Join Our Classes</span>
                   </span>
-                  <div className="bg-white/20 p-3 rounded-full backdrop-blur-md">
-                    <ArrowRight size={24} />
+                  <div className="bg-white/20 p-2.5 rounded-full backdrop-blur-md">
+                    <ArrowRight size={20} />
                   </div>
                 </a>
               </motion.div>
@@ -177,19 +177,18 @@ export function Header() {
 
             <div className="mt-auto">
               {/* Mobile Contact Info */}
-              <motion.div variants={linkVariants} className="bg-white p-6 rounded-2xl shadow-sm border border-border/50 mb-8">
-                <h4 className="text-sm font-bold text-heading/50 uppercase tracking-wider mb-4">Get in Touch</h4>
-                <a href="tel:+917030705472" className="block text-xl font-bold text-heading mb-2 hover:text-primary transition-colors">+91 7030705472</a>
-                <p className="text-heading/70">Wakad, Pune</p>
+              <motion.div variants={linkVariants} className="bg-white p-5 rounded-2xl shadow-sm border border-border/50 mb-4">
+                <h4 className="text-[11px] font-bold text-heading/50 uppercase tracking-wider mb-2">Get in Touch</h4>
+                <a href="tel:+917030705472" className="block text-lg font-bold text-heading mb-1 hover:text-primary transition-colors">+91 7030705472</a>
+                <p className="text-xs text-heading/70">Wakad, Pune</p>
               </motion.div>
 
-              {/* Mobile Menu Socials */}
               <motion.div
                 variants={linkVariants}
-                className="flex items-center justify-center gap-8 text-heading/40"
+                className="flex items-center justify-center gap-6 text-heading/40"
               >
-                <a href="https://www.instagram.com/arogyaraksha_pimple_saudagar/?hl=en" target="_blank" rel="noreferrer" className="p-4 bg-white rounded-full shadow-sm hover:text-primary hover:shadow-md transition-all"><Instagram size={24} /></a>
-                <a href="#" className="p-4 bg-white rounded-full shadow-sm hover:text-primary hover:shadow-md transition-all"><Facebook size={24} /></a>
+                <a href="https://www.instagram.com/arogyaraksha_pimple_saudagar/?hl=en" target="_blank" rel="noreferrer" className="p-3 bg-white rounded-full shadow-sm hover:text-primary hover:shadow-md transition-all text-[#E1306C]"><Instagram size={24} /></a>
+                <a href="tel:+917030705472" className="p-3 bg-white rounded-full shadow-sm hover:text-primary hover:shadow-md transition-all text-primary"><Phone size={24} /></a>
               </motion.div>
             </div>
           </motion.div>

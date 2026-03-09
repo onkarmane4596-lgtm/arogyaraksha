@@ -43,13 +43,13 @@ export function InquiryForm() {
           <div className="pt-8 flex justify-center">
             <button
               onClick={handleWhatsAppClick}
-              className="group relative inline-flex items-center justify-center gap-4 px-10 py-6 bg-primary text-white rounded-[2rem] font-bold tracking-widest uppercase shadow-[0_20px_40px_-15px_rgba(111,166,162,0.6)] hover:bg-primary/90 hover:shadow-[0_20px_50px_-10px_rgba(111,166,162,0.8)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+              type="button"
+              className="group relative inline-flex items-center justify-center gap-4 px-10 py-6 bg-gradient-to-r from-heading via-heading/90 to-primary bg-[length:200%_auto] hover:bg-right text-white rounded-[2rem] font-bold tracking-widest uppercase shadow-[0_20px_40px_-15px_rgba(36,54,74,0.3)] hover:shadow-[0_20px_50px_-10px_rgba(36,54,74,0.5)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
             >
               {/* Shine effect */}
               <div className="absolute inset-0 block h-full w-full -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shimmer pointer-events-none"></div>
 
               <span className="relative z-10 text-lg md:text-xl">Chat on WhatsApp</span>
-
               <div className="relative z-10 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:bg-white/20 transition-colors">
                 <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </div>

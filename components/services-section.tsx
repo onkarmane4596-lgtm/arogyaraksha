@@ -38,38 +38,38 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-16 md:py-24 bg-muted/30">
+    <section id="services" className="py-16 md:py-16 bg-muted/30">
       <div className="container">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-12 md:mb-10">
           <h2 className="text-balance mb-4">Our Specialized Programs</h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            Each program is carefully designed to address specific wellness needs and challenges, 
+            Each program is carefully designed to address specific wellness needs and challenges,
             combining ancient yogic wisdom with modern therapeutic science.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-3 md:gap-5">
           {services.map((service) => {
             const Icon = service.icon
             return (
               <Link
                 key={service.id}
                 href={service.href}
-                className="group bg-card rounded-xl p-8 border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                className="group bg-card rounded-lg md:rounded-xl p-4 md:p-6 border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col h-full"
               >
-                <div className={`${service.color} mb-4 inline-block p-3 bg-background rounded-lg group-hover:scale-110 transition-transform`}>
-                  <Icon size={24} />
+                <div className={`${service.color} mb-2 md:mb-3 inline-block p-2 md:p-2.5 bg-background rounded-lg group-hover:scale-110 transition-transform`}>
+                  <Icon className="w-5 h-5 md:w-5 md:h-5" />
                 </div>
 
-                <h3 className="font-serif text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
+                <h3 className="font-serif text-sm md:text-xl font-semibold mb-1.5 md:mb-3 text-foreground leading-tight group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
 
-                <p className="text-foreground/70 text-sm leading-relaxed mb-4">
+                <p className="text-foreground/70 text-[10px] sm:text-[12px] md:text-sm leading-relaxed mb-3 md:mb-4 flex-grow line-clamp-3 md:line-clamp-none">
                   {service.description}
                 </p>
 
-                <div className="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
+                <div className="mt-auto inline-flex items-center gap-1.5 md:gap-2 text-primary font-medium text-[9px] md:text-sm group-hover:gap-2.5 transition-all">
                   Learn More
                   <span className="transition-transform group-hover:translate-x-1">→</span>
                 </div>

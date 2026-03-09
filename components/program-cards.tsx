@@ -50,13 +50,13 @@ const programs = [
 
 export function ProgramCards() {
     return (
-        <section className="py-16 md:py-32 bg-background relative overflow-hidden">
+        <section className="py-16 md:py-20 bg-background relative overflow-hidden">
             {/* Background Texture/Accents - Soft Organic */}
             <div className="absolute top-0 right-0 w-[400px] md:w-[500px] h-[400px] md:h-[500px] bg-primary/5 rounded-full blur-[100px] md:blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-[400px] md:w-[500px] h-[400px] md:h-[500px] bg-secondary/5 rounded-full blur-[100px] md:blur-[120px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
             <div className="container relative z-10 px-4 md:px-8">
-                <div className="max-w-3xl mb-12 md:mb-16 space-y-4 md:space-y-6">
+                <div className="max-w-3xl mb-12 md:mb-12 space-y-4 md:space-y-4">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -70,7 +70,7 @@ export function ProgramCards() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-heading mb-4 md:mb-6 leading-[1.1] tracking-tight font-bold"
+                        className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-heading mb-4 md:mb-4 leading-[1.1] tracking-tight font-bold"
                     >
                         Tailored Paths to <br /><span className="italic font-light text-primary">Holistic Wellness</span>
                     </motion.h2>
@@ -79,13 +79,13 @@ export function ProgramCards() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-base md:text-xl text-foreground/80 font-light max-w-2xl leading-relaxed"
+                        className="text-base md:text-lg text-foreground/80 font-light max-w-2xl leading-relaxed"
                     >
                         Choose the program that resonates with your current needs. From core strength to hormonal balance, we guide you at every step.
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
                     {programs.map((program, index) => {
                         const Icon = program.icon
                         const waUrl = `https://wa.me/917030705472?text=${encodeURIComponent(program.whatsappMsg)}`
@@ -99,34 +99,34 @@ export function ProgramCards() {
                                 transition={{ delay: index * 0.1, duration: 0.8 }}
                                 className="group relative"
                             >
-                                <div className="absolute -inset-0.5 bg-gradient-to-br from-primary/30 to-secondary/10 rounded-[2rem] md:rounded-[2.5rem] blur-md opacity-0 group-hover:opacity-100 transition duration-700"></div>
-                                <div className="relative bg-card border border-primary/10 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-10 h-full flex flex-col hover:border-primary/30 transition-all duration-500 shadow-xl shadow-primary/5">
-                                    <div className="flex justify-between items-start mb-6 md:mb-10">
-                                        <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-[1.25rem] bg-white border border-primary/20 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-500 ease-out shadow-sm">
-                                            <Icon className="w-6 h-6 md:w-8 md:h-8" />
+                                <div className="absolute -inset-0.5 bg-gradient-to-br from-primary/30 to-secondary/10 rounded-[1.25rem] md:rounded-[2rem] blur-md opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                                <div className="relative bg-card border border-primary/10 rounded-[1.25rem] md:rounded-[2rem] p-4 md:p-7 h-full flex flex-col hover:border-primary/30 transition-all duration-500 shadow-xl shadow-primary/5">
+                                    <div className="flex justify-between items-start mb-3 md:mb-6">
+                                        <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg md:rounded-[1.25rem] bg-white border border-primary/20 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-500 ease-out shadow-sm">
+                                            <Icon className="w-4 h-4 md:w-8 md:h-8" />
                                         </div>
-                                        <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-primary border border-primary/20 bg-white px-3 md:px-4 py-1.5 rounded-full group-hover:border-primary/40 transition-colors">
+                                        <span className="text-[7px] md:text-[10px] font-bold uppercase tracking-[0.1em] md:tracking-[0.25em] text-primary border border-primary/20 bg-white px-2 mt-0.5 md:px-4 py-0.5 md:py-1 rounded-full group-hover:border-primary/40 transition-colors">
                                             {program.duration}
                                         </span>
                                     </div>
 
-                                    <h3 className="text-xl sm:text-2xl md:text-3xl font-sans font-bold mb-3 md:mb-4 text-heading group-hover:text-primary transition-colors tracking-tight">{program.title}</h3>
-                                    <p className="text-foreground/80 leading-relaxed font-light mb-6 md:mb-10 flex-grow text-[14px] md:text-lg">
+                                    <h3 className="text-sm sm:text-lg md:text-2xl font-sans font-bold mb-1.5 md:mb-3 text-heading group-hover:text-primary transition-colors tracking-tight leading-tight">{program.title}</h3>
+                                    <p className="text-foreground/80 leading-relaxed font-light mb-3 md:mb-6 flex-grow text-[10px] sm:text-[13px] md:text-base line-clamp-3 md:line-clamp-none">
                                         {program.description}
                                     </p>
 
-                                    <div className="space-y-4 md:space-y-5">
-                                        <div className="flex items-center gap-3 md:gap-4 text-[11px] md:text-xs font-bold text-heading uppercase tracking-widest bg-white p-3 md:p-4 rounded-xl md:rounded-2xl border border-primary/10 shadow-sm">
-                                            <Clock size={16} className="text-primary" />
-                                            <span>{program.timing}</span>
+                                    <div className="space-y-2.5 md:space-y-4 mt-auto">
+                                        <div className="flex items-center gap-1.5 md:gap-3 text-[8px] md:text-xs font-bold text-heading uppercase tracking-widest bg-white p-2 md:p-3 rounded-lg md:rounded-xl border border-primary/10 shadow-sm whitespace-nowrap overflow-hidden">
+                                            <Clock size={12} className="text-primary md:w-3.5 md:h-3.5 w-3 h-3 shrink-0" />
+                                            <span className="truncate">{program.timing}</span>
                                         </div>
                                         <Link
                                             href={waUrl}
                                             target="_blank"
-                                            className="w-full inline-flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-4 md:py-5 bg-primary text-white rounded-xl md:rounded-2xl font-bold tracking-widest uppercase text-[11px] md:text-xs shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all group/btn"
+                                            className="w-full inline-flex items-center justify-center gap-1.5 md:gap-3 px-3 md:px-6 py-2 md:py-4 bg-gradient-to-r from-heading via-heading/90 to-primary bg-[length:200%_auto] hover:bg-right text-white rounded-lg md:rounded-xl font-bold tracking-widest uppercase text-[8px] md:text-xs shadow-md shadow-primary/20 hover:shadow-lg transition-all group/btn"
                                         >
-                                            Inquire Now
-                                            <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+                                            Inquire
+                                            <ArrowRight size={10} className="group-hover/btn:translate-x-1 transition-transform md:w-3.5 md:h-3.5 w-3 h-3" />
                                         </Link>
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@ export function ProgramCards() {
 
                     <Link
                         href="/contact"
-                        className="group relative inline-flex items-center justify-center gap-3 md:gap-4 px-6 sm:px-8 md:px-12 py-4 md:py-6 bg-primary text-white rounded-full md:rounded-[2rem] font-bold tracking-widest uppercase text-[11px] md:text-sm shadow-2xl shadow-primary/20 hover:bg-primary/90 hover:scale-105 transition-all duration-500 overflow-hidden w-full sm:w-auto"
+                        className="group relative inline-flex items-center justify-center gap-3 md:gap-4 px-6 sm:px-8 md:px-12 py-4 md:py-6 bg-gradient-to-r from-heading to-primary text-white rounded-full md:rounded-[2rem] font-bold tracking-widest uppercase text-[11px] md:text-sm shadow-2xl shadow-primary/25 hover:shadow-primary/40 hover:scale-105 transition-all duration-500 overflow-hidden w-full sm:w-auto"
                     >
                         <span className="relative z-10 flex items-center justify-center gap-2 md:gap-3">
                             <span className="truncate">Consult Our Experts</span>

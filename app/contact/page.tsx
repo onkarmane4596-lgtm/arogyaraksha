@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { InquiryForm } from '@/components/inquiry-form'
-import { MapPin, Phone, Mail, Clock, ChevronDown, ArrowRight, Activity, Play, BookOpen } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, ChevronDown, ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -277,39 +277,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Why Reach Out? - Modified to Light/Mixed */}
-      <section className="py-16 md:py-24 bg-background px-4 md:px-8">
-        <div className="container max-w-7xl mx-auto">
-          <div className="max-w-3xl mb-12 md:mb-16 space-y-4 md:space-y-6">
-            <span className="text-primary font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-xs">Incentives</span>
-            <h2 className="font-sans font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-heading leading-[1.1] tracking-tight text-balance">
-              Why Start a <span className="italic font-light text-primary">Conversation?</span>
-            </h2>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {[
-              { title: "Personal Health Consultation", desc: "Discuss your metabolic markers or hormonal concerns privately.", icon: Activity },
-              { title: "Book a Trial Session", desc: "Experience our clinical teaching approach before you commit.", icon: Play },
-              { title: "Medical Documentation", desc: "Submit your reports for a therapist to review for specific variations.", icon: BookOpen },
-              { title: "Program Scheduling", desc: "Clarify offline batch vacancies or online 1-on-1 availability.", icon: Clock },
-            ].map((item, i) => {
-              const Icon = item.icon
-              return (
-                <div key={i} className="bg-card p-6 md:p-8 lg:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-primary/10 hover:border-primary/30 hover:bg-background hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 group flex flex-col justify-start">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-background rounded-xl md:rounded-2xl flex items-center justify-center text-primary mb-6 md:mb-8 border border-primary/10 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm">
-                    <Icon className="w-5 h-5 md:w-6 md:h-6" />
-                  </div>
-                  <h3 className="font-sans font-bold text-lg md:text-xl mb-3 md:mb-4 text-heading transition-colors leading-tight group-hover:text-primary">{item.title}</h3>
-                  <p className="text-foreground/80 font-light leading-relaxed text-[14px] md:text-[15px]">
-                    {item.desc}
-                  </p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* Inquiry Form Wrapper - Light Fade to Light Form */}
       <section className="bg-card pt-16 md:pt-24 border-t border-primary/10 px-4 md:px-8">

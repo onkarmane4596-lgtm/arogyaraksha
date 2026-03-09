@@ -32,9 +32,8 @@ export default function ProgramsPage() {
                     </motion.div>
 
                     {/* Premium Overlays for Depth & Focus */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/60 to-background z-10"></div>
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(111,166,162,0.05)_100%)] z-10"></div>
-                    <div className="absolute inset-0 bg-primary/5 mix-blend-multiply z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background z-10"></div>
+                    <div className="absolute inset-0 bg-primary/10 mix-blend-multiply z-10"></div>
 
                     <div className="container relative z-30 flex flex-col items-center text-center mt-20 px-4">
                         {/* Eye-catching Eyebrow */}
@@ -43,20 +42,20 @@ export default function ProgramsPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3 }}
                         >
-                            <span className="text-primary font-sans tracking-[0.2em] md:tracking-[0.4em] uppercase text-[10px] md:text-xs font-bold inline-block border-b-2 border-primary/20 pb-2 md:pb-3 mb-6 md:mb-10 drop-shadow-sm">
+                            <span className="text-primary font-sans tracking-[0.2em] md:tracking-[0.4em] uppercase text-[10px] md:text-xs font-bold inline-block border-b-2 border-primary/20 pb-2 md:pb-3 mb-6 md:mb-6 [text-shadow:_0_1px_2px_rgba(0,0,0,0.05)]">
                                 Clinical & Therapeutic
                             </span>
                         </motion.div>
 
-                        <div className="max-w-5xl w-full mb-6 md:mb-10">
+                        <div className="max-w-5xl w-full mb-6 md:mb-6">
                             <motion.h1
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 1, delay: 0.5 }}
-                                className="text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] font-sans font-bold text-heading tracking-tight drop-shadow-sm leading-[1.05]"
+                                className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-sans font-bold text-heading tracking-tight leading-[1.05] [text-shadow:_0_2px_10px_rgba(0,0,0,0.08)]"
                             >
-                                Curated <br />
-                                <span className="italic font-light text-heading/90">Pathways</span>
+                                Therapeutic <br />
+                                <span className="italic font-light text-heading/90">Yoga Batches</span>
                             </motion.h1>
                         </div>
 
@@ -64,7 +63,7 @@ export default function ProgramsPage() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, delay: 0.7 }}
-                            className="text-base md:text-xl text-foreground/80 max-w-2xl leading-relaxed font-light drop-shadow-sm"
+                            className="text-base md:text-xl text-foreground font-medium max-w-2xl leading-relaxed [text-shadow:_0_1px_2px_rgba(0,0,0,0.05)]"
                         >
                             Specialized therapeutic regimens meticulously designed for your unique physiological needs.
                         </motion.p>

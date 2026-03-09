@@ -35,13 +35,13 @@ const team = [
     name: 'Shivani Mulik',
     role: 'Fitness Trainer & Yoga Teacher',
     bio: 'Masters in Yoga | Specializing in Online and Offline therapeutic yoga sessions, providing personalized fitness training and holistic healing.',
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b',
+    image: '/images/team/shivani.jpeg',
   },
   {
-    name: 'Shankar Patil Sawant',
+    name: 'Shankar Sawant',
     role: 'Certified Yoga Teacher',
     bio: 'B.A. & Masters in Yoga | Specialist in Weight Loss, PCOD/PCOS, Thyroid & Diabetes management at our premium Pune studio.',
-    image: 'https://images.unsplash.com/photo-1599901860904-17e08c2d468e',
+    image: '/images/team/shankar.jpeg',
   },
 ]
 
@@ -68,9 +68,8 @@ export default function AboutPage() {
         </motion.div>
 
         {/* Premium Overlays for Depth & Focus */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/60 to-background z-10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(111,166,162,0.05)_100%)] z-10"></div>
-        <div className="absolute inset-0 bg-primary/5 mix-blend-multiply z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background z-10"></div>
+        <div className="absolute inset-0 bg-primary/10 mix-blend-multiply z-10"></div>
 
         <div className="container relative z-30 flex flex-col items-center text-center mt-20 px-4">
           <motion.div
@@ -78,7 +77,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <span className="text-primary font-sans tracking-[0.2em] md:tracking-[0.4em] uppercase text-[10px] md:text-xs font-bold inline-block border-b-2 border-primary/20 pb-2 md:pb-3 mb-6 md:mb-10 drop-shadow-sm">
+            <span className="text-primary font-sans tracking-[0.2em] md:tracking-[0.4em] uppercase text-[10px] md:text-xs font-bold inline-block border-b-2 border-primary/20 pb-2 md:pb-3 mb-6 md:mb-10 [text-shadow:_0_1px_2px_rgba(0,0,0,0.05)]">
               Since 2018 • Pune, India
             </span>
           </motion.div>
@@ -88,7 +87,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] font-sans font-bold text-heading tracking-tight drop-shadow-sm leading-[1.05]"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] font-sans font-bold text-heading tracking-tight leading-[1.05] [text-shadow:_0_2px_10px_rgba(0,0,0,0.08)]"
             >
               The Science of <br />
               <span className="italic font-light text-heading/90">Deep Healing</span>
@@ -99,7 +98,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7 }}
-            className="text-base md:text-xl text-foreground/80 max-w-2xl leading-relaxed font-light drop-shadow-sm"
+            className="text-base md:text-xl text-foreground font-medium max-w-2xl leading-relaxed [text-shadow:_0_1px_2px_rgba(0,0,0,0.05)]"
           >
             We don't just teach yoga; we provide clinical protocols for internal correction and hormonal balance.
           </motion.p>
@@ -162,18 +161,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Premium Values Grid - Light Theme */}
-      <section className="py-16 md:py-24 bg-secondary/5 relative overflow-hidden border-y border-primary/5">
-        <div className="container relative z-10 max-w-7xl px-4 md:px-8">
-          <div className="max-w-2xl mb-12 md:mb-16 space-y-4 md:space-y-6">
-            <span className="text-primary font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-xs">The Tenets</span>
-            <h2 className="font-sans font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-heading leading-[1.1] tracking-tight">
-              Our Clinical <br />
-              <span className="italic font-light text-primary">Pillars</span>
+      {/* Premium Values Grid - Light Theme - Compact Redesign */}
+      <section className="py-12 md:py-20 bg-secondary/5 relative overflow-hidden border-y border-primary/5 px-4 md:px-8">
+        <div className="container relative z-10 max-w-6xl mx-auto">
+          <div className="max-w-2xl mb-8 md:mb-12 space-y-2 md:space-y-3">
+            <span className="text-primary font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[9px] md:text-xs">The Tenets</span>
+            <h2 className="font-sans font-bold text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-heading leading-[1.1] tracking-tight">
+              Our Clinical <span className="italic font-light text-primary">Pillars</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
             {values.map((value, index) => {
               const Icon = value.icon
               return (
@@ -183,14 +181,14 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-card/80 backdrop-blur-xl p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-primary/10 group hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 relative overflow-hidden"
+                  className="bg-card/95 backdrop-blur-xl p-5 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border border-primary/10 group hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 relative overflow-hidden flex flex-col items-start text-left"
                 >
-                  <div className="absolute -inset-0.5 bg-gradient-to-br from-primary/20 to-secondary/10 opacity-0 group-hover:opacity-100 transition duration-700 blur-md pointer-events-none z-[-1]"></div>
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-[1.25rem] bg-white border border-primary/20 flex items-center justify-center text-primary mb-6 md:mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm">
-                    <Icon className="w-6 h-6 md:w-8 md:h-8" />
+                  <div className="absolute -inset-0.5 bg-gradient-to-br from-primary/10 to-secondary/5 opacity-0 group-hover:opacity-100 transition duration-700 blur-md pointer-events-none z-[-1]"></div>
+                  <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white border border-primary/10 flex items-center justify-center text-primary mb-4 md:mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm shrink-0">
+                    <Icon className="w-5 h-5 md:w-7 md:h-7" />
                   </div>
-                  <h3 className="font-sans font-bold text-xl md:text-2xl mb-3 md:mb-4 text-heading group-hover:text-primary transition-colors tracking-tight">{value.title}</h3>
-                  <p className="text-foreground/80 text-[14px] md:text-[17px] leading-relaxed font-light">{value.description}</p>
+                  <h3 className="font-sans font-bold text-lg md:text-2xl mb-2 md:mb-3 text-heading group-hover:text-primary transition-colors tracking-tight leading-tight">{value.title}</h3>
+                  <p className="text-foreground/70 text-[13px] md:text-base leading-relaxed font-light">{value.description}</p>
                 </motion.div>
               )
             })}
@@ -271,13 +269,12 @@ export default function AboutPage() {
             <div className="pt-4 md:pt-6">
               <Link
                 href="/contact"
-                className="group relative inline-flex items-center justify-center gap-3 md:gap-4 px-8 sm:px-10 md:px-12 py-4 md:py-5 bg-primary text-white rounded-full md:rounded-[2rem] font-bold tracking-widest uppercase text-[11px] md:text-sm shadow-2xl shadow-primary/20 hover:bg-primary/90 hover:scale-105 transition-all duration-500 overflow-hidden w-full sm:w-auto"
+                className="group relative inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-heading to-primary text-white rounded-full font-bold tracking-[0.2em] uppercase text-sm shadow-2xl shadow-primary/30 hover:shadow-primary/50 hover:scale-105 transition-all duration-500 overflow-hidden sm:w-auto"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2 md:gap-3">
-                  <span className="truncate">Schedule Consultation</span>
+                  <span className="truncate">Join Our Classes</span>
                   <ArrowRight className="w-4 h-4 md:w-5 md:h-5 shrink-0 group-hover:translate-x-1 md:group-hover:translate-x-2 transition-transform duration-500" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </Link>
             </div>
           </motion.div>

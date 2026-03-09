@@ -117,10 +117,7 @@ export function Footer() {
             <span className="opacity-50 mx-1 hidden md:inline">|</span> Powered by {' '}
             <a href="https://www.techsarthiservices.in/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-medium">Techsarthi</a>
           </p>
-          <div className="flex gap-6 md:gap-8 text-foreground/50 text-[10px] md:text-xs font-bold uppercase tracking-[0.1em] md:tracking-[0.2em]">
-            <Link href="/privacy" className="hover:text-heading transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-heading transition-colors">Terms of Service</Link>
-          </div>
+
         </div>
       </div>
     </footer>
