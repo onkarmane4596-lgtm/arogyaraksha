@@ -55,6 +55,7 @@ export const metadata: Metadata = {
 }
 
 import { FloatingContact } from '@/components/floating-contact'
+import { LoadingScreen } from '@/components/loading-screen'
 
 export default function RootLayout({
   children,
@@ -64,6 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorantGaramond.variable} ${outfit.variable} ${poppins.variable} ${inter.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased bg-background text-foreground scroll-smooth overflow-x-hidden" suppressHydrationWarning>
+        <LoadingScreen />
         {children}
         <FloatingContact />
         <Analytics />

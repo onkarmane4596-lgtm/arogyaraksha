@@ -8,8 +8,8 @@ import { cn } from '@/lib/utils'
 const featuredBatches = [
     {
         id: "pcos",
-        title: "PCOS/PCOD Therapy",
-        description: "Specialized endocrinology-focused practice to restore natural hormonal balance.",
+        title: "PCOD/PCOS Therapy",
+        description: "100% online program designed to support hormonal balance and weight management.",
         href: "/services/pcos-hormonal-therapy-yoga",
         icon: Leaf,
         color: "text-emerald-500",
@@ -20,8 +20,8 @@ const featuredBatches = [
     },
     {
         id: "senior",
-        title: "Senior Citizen Mobility",
-        description: "Prop-supported restorative methods ensuring zero pressure on joints while improving flexibility.",
+        title: "Senior Citizen Batch",
+        description: "Safe, slow-paced yoga focusing on knee/back pain relief and mobility restoration.",
         href: "/services/senior-citizen-mobility",
         icon: Shield,
         color: "text-blue-500",
@@ -32,8 +32,8 @@ const featuredBatches = [
     },
     {
         id: "weight",
-        title: "Therapeutic Weight Loss",
-        description: "Metabolic correction stimulating the thyroid and lowering insulin resistance naturally.",
+        title: "21-Day Weight Loss",
+        description: "Targeted fat reduction workshop for tummy, arms, and thighs starting every 10th.",
         href: "/services/therapeutic-weight-loss",
         icon: Activity,
         color: "text-orange-500",
@@ -44,9 +44,9 @@ const featuredBatches = [
     },
     {
         id: "daily",
-        title: "Daily Wellness Batches",
-        description: "Consistent morning and evening flows to maintain strength, immunity, and mental clarity.",
-        href: "/programs",
+        title: "Regular Yoga Practice",
+        description: "Online + Offline sessions including Asanas, Pranayama, Zumba, and Strength Training.",
+        href: "/services/regular-yoga-practice",
         icon: Sun,
         color: "text-primary",
         bgColor: "bg-primary/10",

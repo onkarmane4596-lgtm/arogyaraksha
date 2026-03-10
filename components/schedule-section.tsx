@@ -70,7 +70,7 @@ export function ScheduleSection() {
                         transition={{ delay: 0.1 }}
                         className="text-slate-600 text-xl font-light max-w-2xl mx-auto"
                     >
-                        Online and Offline sessions available. Choose a time that suits your lifestyle.
+                        Both Online and Offline sessions are available tailored for your convenience.
                     </motion.p>
                 </div>
 
