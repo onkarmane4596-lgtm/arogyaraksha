@@ -55,15 +55,14 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Programs - 2 cols */}
+          {/* Batches - 2 cols */}
           <div className="lg:col-span-2">
-            <h4 className="font-sans font-bold text-xs md:text-sm uppercase tracking-[0.2em] text-heading mb-5 md:mb-8">Programs</h4>
+            <h4 className="font-sans font-bold text-xs md:text-sm uppercase tracking-[0.2em] text-heading mb-5 md:mb-8">Batches</h4>
             <ul className="space-y-3 md:space-y-4 text-foreground/80 font-light text-[15px] md:text-base">
-              <li><Link href="/services/pcos-hormonal-therapy-yoga" className="hover:text-primary transition-colors flex items-center gap-2 group"><ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />PCOS Therapy</Link></li>
+              <li><Link href="/services/regular-yoga-practice" className="hover:text-primary transition-colors flex items-center gap-2 group"><ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />Regular Yoga</Link></li>
+              <li><Link href="/services/pcos-hormonal-therapy-yoga" className="hover:text-primary transition-colors flex items-center gap-2 group"><ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />PCOD/PCOS</Link></li>
               <li><Link href="/services/senior-citizen-mobility" className="hover:text-primary transition-colors flex items-center gap-2 group"><ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />Senior Citizen</Link></li>
-              <li><Link href="/services/therapeutic-weight-loss" className="hover:text-primary transition-colors flex items-center gap-2 group"><ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />Weight Loss</Link></li>
-              <li><Link href="/programs" className="hover:text-primary transition-colors flex items-center gap-2 group"><ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />Daily Batches</Link></li>
-              <li><Link href="/programs" className="hover:text-primary transition-colors flex items-center gap-2 group"><ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />Yoga Therapy</Link></li>
+              <li><Link href="/services/therapeutic-weight-loss" className="hover:text-primary transition-colors flex items-center gap-2 group"><ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />Fat Reduction</Link></li>
             </ul>
           </div>
 

@@ -84,7 +84,7 @@ export function HeroSection() {
       {/* CONTENT */}
       <motion.div
         style={{ y: textY }}
-        className="container relative z-20 pt-16 pb-8 md:pt-24 md:pb-16 flex flex-col justify-center items-center"
+        className="container relative z-20 pt-16 pb-8 md:pt-36 md:pb-16 flex flex-col justify-center items-center"
       >
         <div className="max-w-5xl w-full flex flex-col items-center text-center">
           <div className="flex flex-col items-center text-center mb-6 md:mb-10">
@@ -94,13 +94,13 @@ export function HeroSection() {
               transition={{ duration: 0.8 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-heading leading-[1.05] tracking-tight mb-3 md:mb-4"
             >
-              Heal with Therapeutic{' '}
+              Transform Your Life Through{' '}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-heading to-primary inline-block py-1.5 px-1">
-                Yoga
+                Yoga.
               </span>
               <br />
-              <span className="italic font-medium bg-clip-text text-transparent bg-gradient-to-r from-heading to-primary inline-block py-1.5 px-1">
-                Transform Your Life
+              <span className="italic font-light bg-clip-text text-transparent bg-gradient-to-r from-heading to-primary inline-block py-1.5 px-1 text-2xl sm:text-2xl md:text-3xl lg:text-4xl">
+                Build strength, improve flexibility, and discover inner peace.
               </span>
             </motion.h1>
 
@@ -110,9 +110,7 @@ export function HeroSection() {
               transition={{ delay: 0.2 }}
               className="text-[14px] sm:text-base md:text-lg lg:text-xl text-heading/80 font-medium leading-relaxed mb-8 md:mb-10 max-w-4xl"
             >
-              Experience a holistic lifestyle therapy and clinical wellness
-              program designed by experts to correct posture, treat PCOS,
-              support seniors, and restore absolute hormonal balance.
+              A healthier, happier you starts right here.
             </motion.p>
 
             {/* STATS */}

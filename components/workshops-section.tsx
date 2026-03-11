@@ -65,8 +65,8 @@ export function WorkshopsSection() {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ delay: 0.1, duration: 0.8, ease: "easeOut" }}
                         className="font-sans font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-4xl text-heading leading-[1.1] tracking-tight"
                     >
                         Advanced Healing <br className="hidden md:block" />
@@ -75,8 +75,8 @@ export function WorkshopsSection() {
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
                         className="text-foreground/80 text-sm md:text-lg font-medium max-w-2xl mx-auto leading-relaxed"
                     >
                         Deep dive into specific healing modalities designed to address profound wellness needs with expert guidance.
@@ -133,8 +133,8 @@ export function WorkshopsSection() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.8 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
                     className="mt-16 md:mt-24 flex flex-col items-center text-center space-y-6 relative z-20"
                 >
                     <div className="flex items-center gap-3 text-primary/60">

@@ -50,7 +50,7 @@ export const LoadingScreen = () => {
                             <div className="flex items-center gap-3">
                                 <div className="h-[1px] w-12 bg-primary/20" />
                                 <span className="text-[10px] md:text-[14px] uppercase tracking-[0.4em] font-sans font-medium text-primary/60">
-                                    Therapeutic Yoga
+                                    Nature Cure & Yoga
                                 </span>
                                 <div className="h-[1px] w-12 bg-primary/20" />
                             </div>

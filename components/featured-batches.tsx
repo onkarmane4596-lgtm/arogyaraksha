@@ -7,8 +7,20 @@ import { cn } from '@/lib/utils'
 
 const featuredBatches = [
     {
+        id: "daily",
+        title: "Regular Yoga practice batch",
+        description: "Online + Offline sessions including Asanas, Pranayama, Zumba, and Strength Training.",
+        href: "/services/regular-yoga-practice",
+        icon: Sun,
+        color: "text-primary",
+        bgColor: "bg-primary/10",
+        borderColor: "border-primary/20",
+        hoverBorder: "group-hover:border-primary/40",
+        shadow: "shadow-primary/5",
+    },
+    {
         id: "pcos",
-        title: "PCOD/PCOS Therapy",
+        title: "pcod/pcos weight loss batch",
         description: "100% online program designed to support hormonal balance and weight management.",
         href: "/services/pcos-hormonal-therapy-yoga",
         icon: Leaf,
@@ -20,7 +32,7 @@ const featuredBatches = [
     },
     {
         id: "senior",
-        title: "Senior Citizen Batch",
+        title: "Special batch for senior citizens",
         description: "Safe, slow-paced yoga focusing on knee/back pain relief and mobility restoration.",
         href: "/services/senior-citizen-mobility",
         icon: Shield,
@@ -32,7 +44,7 @@ const featuredBatches = [
     },
     {
         id: "weight",
-        title: "21-Day Weight Loss",
+        title: "21 days tummy arms thighs  fat reduction workshop",
         description: "Targeted fat reduction workshop for tummy, arms, and thighs starting every 10th.",
         href: "/services/therapeutic-weight-loss",
         icon: Activity,
@@ -41,18 +53,6 @@ const featuredBatches = [
         borderColor: "border-orange-500/20",
         hoverBorder: "group-hover:border-orange-500/40",
         shadow: "shadow-orange-500/5",
-    },
-    {
-        id: "daily",
-        title: "Regular Yoga Practice",
-        description: "Online + Offline sessions including Asanas, Pranayama, Zumba, and Strength Training.",
-        href: "/services/regular-yoga-practice",
-        icon: Sun,
-        color: "text-primary",
-        bgColor: "bg-primary/10",
-        borderColor: "border-primary/20",
-        hoverBorder: "group-hover:border-primary/40",
-        shadow: "shadow-primary/5",
     }
 ]
 
@@ -82,7 +82,7 @@ export function FeaturedBatches() {
                         transition={{ delay: 0.1 }}
                         className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-4xl text-heading leading-[1.1] tracking-tight font-bold"
                     >
-                        Our Therapeutic <br className="md:hidden" />
+                        Our <br className="md:hidden" />
                         <span className="italic font-light text-primary">Yoga Batches</span>
                     </motion.h2>
                     <motion.p
@@ -102,8 +102,8 @@ export function FeaturedBatches() {
                             key={batch.id}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1, duration: 0.6 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ delay: index * 0.1, duration: 0.8, ease: "easeOut" }}
                             className="group relative h-full flex flex-col"
                         >
                             <div className="absolute -inset-0.5 bg-gradient-to-br from-primary/20 to-secondary/10 rounded-[2rem] blur-md opacity-0 group-hover:opacity-100 transition duration-700"></div>
